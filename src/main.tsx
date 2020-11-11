@@ -1,14 +1,14 @@
 import * as React from 'react';
+import { CertificateContainer, ContactContainer, HeaderContainer } from '@/containers';
 
-function App() {
+const App = () => {
   return (
-    <div className="App text-center">
+    <div className='App text-center'>
+      <HeaderContainer />
       <section>
         <h1>Hero</h1>
       </section>
-      <section>
-        <h1>Certificates</h1>
-      </section>
+      <CertificateContainer />
       <section>
         <h1>About</h1>
       </section>
@@ -30,9 +30,7 @@ function App() {
       <section>
         <h1>Product</h1>
       </section>
-      <section>
-        <h1>Contact US</h1>
-      </section>
+      <ContactContainer />
     </div>
   );
 }

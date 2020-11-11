@@ -23,7 +23,8 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "craco eject"
+    "eject": "craco eject",
+    "generate": "plop"
   },
   "eslintConfig": {
     "extends": [
@@ -49,10 +50,12 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "@types/styled-components": "^5.1.4",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-import": "^2.22.1",
     "node-sass": "^4.14.1",
+    "plop": "^2.7.4",
     "react-scripts": "3.4.3"
   }
 }
