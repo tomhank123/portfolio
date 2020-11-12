@@ -1,8 +1,11 @@
+import { fa } from '@/helpers';
 import App from '@/main';
 import '@/scss/custom.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
+
+fa.init();
 
 ReactDOM.render(
   <React.StrictMode>
