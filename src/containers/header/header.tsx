@@ -6,7 +6,7 @@ interface IProps {}
 
 const HeaderContainer: FC<IProps> = (props: IProps) => {
   return (
-    <Header>
+    <Header className='d-none'>
       <Header.Title>Header Container</Header.Title>
     </Header>
   );

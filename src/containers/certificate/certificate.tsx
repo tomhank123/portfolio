@@ -8,17 +8,17 @@ interface IProps {}
 
 const CertificateContainer: FC<IProps> = (props: IProps) => {
   return (
-    <section className='bg-dark text-light py-4'>
+    <section className='bg-dark text-secondary py-4'>
       <Container>
         <h1 className='mb-3'>Certificates</h1>
         <Row>
-          {certificateData.map((item) => (
-            <Col xs={6} sm={3} lg={2} className='mb-3'>
-              <Card className='h-100 text-dark text-center'>
+          {certificateData.map((item, index) => (
+            <Col xs={6} sm={3} lg={2} className='mb-3' key={index}>
+              <Card className='h-100 text-dark text-center border-0' bg='secondary'>
                 <Card.Body>
-                  <FontAwesomeIcon icon={['fas', 'award']} className='text-muted mb-3' size='5x' />
+                  <FontAwesomeIcon icon={['fas', 'award']} className='text-dark mb-3' size='5x' />
                   <h6>{item.title}</h6>
-                  <small className='text-muted'>{item.issuedBy}</small>
+                  <small className='text-dark'>{item.issuedBy}</small>
                 </Card.Body>
               </Card>
             </Col>

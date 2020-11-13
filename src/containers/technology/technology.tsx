@@ -7,15 +7,20 @@ interface IProps {}
 
 const TechnologyContainer: FC<IProps> = (props: IProps) => {
   return (
-    <section className='bg-dark text-light py-4'>
+    <section className='bg-dark text-secondary py-4'>
       <Container>
         <h1 className='mb-3'>Technologies</h1>
         <Row>
-          {technologiesData.map((item) => (
-            <Col xs={6} sm={3} lg={2} className='mb-3'>
-              <Card className='h-100 text-dark'>
-                <Card.Body className='d-flex flex-column align-items-center justify-content-start'>
-                  <img src={item.thumb} alt={item.title} className='w-75 mb-auto'/>
+          {technologiesData.map((item, index) => (
+            <Col xs={6} sm={3} lg={2} className='mb-3' key={index}>
+              <Card className='h-100 shadow' bg='secondary'>
+                <Card.Body className='d-flex flex-column align-items-center justify-content-start bg-dark'>
+                  <img
+                    src={item.thumb}
+                    alt={item.title}
+                    className='w-75 mb-auto'
+                    style={{ filter: 'brightness(0.3)' }}
+                  />
                   <h6>{item.title}</h6>
                   <small className='text-muted'>{item.issuedBy}</small>
                 </Card.Body>

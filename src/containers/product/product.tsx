@@ -6,7 +6,7 @@ interface IProps {}
 
 const ProductContainer: FC<IProps> = (props: IProps) => {
   return (
-    <section className='bg-light text-dark py-4'>
+    <section className='bg-secondary text-dark py-4'>
       <Container>
         <Row>
           <Col sm={4}>

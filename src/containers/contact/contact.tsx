@@ -11,14 +11,14 @@ const ContactContainer: FC<IProps> = (props: IProps) => {
         <h1 className='mb-3'>Contact me</h1>
         <Row>
           <Col xs={6}>
-            <Card>
+            <Card bg='secondary'>
               <Card.Body className='p-5 text-dark'>
                 <h1>Contact Form</h1>
               </Card.Body>
             </Card>
           </Col>
           <Col xs={6}>
-            <Card>
+            <Card bg='secondary'>
               <Card.Body className='p-5 text-dark'>
                 <h1>Map</h1>
               </Card.Body>
