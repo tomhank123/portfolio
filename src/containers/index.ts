@@ -6,3 +6,6 @@ export { default as ProductContainer } from './product';
 export { default as ProjectContainer } from './project';
 export { default as TechnologyContainer } from './technology';
 export { default as JumbotronContainer } from './jumbotron';
+export { default as SkillContainer } from './skill';
+export { default as ExperienceContainer } from './experience';
+export { default as EducationContainer } from './education';

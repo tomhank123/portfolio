@@ -11,10 +11,10 @@ const JumbotronContainer: FC<IProps> = (props: IProps) => {
         <Row>
           <Col sm={8}>
             <p className='lead text-warning'>Hi, my name is</p>
-            <h1 className='display-2 font-weight-bold'>Brittany Chiang.</h1>
+            <h1 className='display-2 font-weight-bold'>Duc Tran.</h1>
             <h2 className='display-4 font-weight-bold'>I build things for the web.</h2>
             <p className='lead'>
-              I'm a software engineer based in Boston, MA specializing in building (and occasionally designing)
+              I'm a software engineer based in Ho Chi Minh, VN specializing in building (and occasionally designing)
               exceptional websites, applications, and everything in between.
             </p>
             <Button variant='outline-warning'>Get In Touch</Button>

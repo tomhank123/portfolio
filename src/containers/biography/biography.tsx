@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 import { FC } from 'react';
-import { Card, Col, Container, Row } from 'react-bootstrap';
+import { Button, Card, Col, Container, Row } from 'react-bootstrap';
+import avatarJPG from '@/assets/images/avatar.jpg';
 
 interface IProps {}
 
@@ -30,18 +31,68 @@ const BiographyContainer: FC<IProps> = (props: IProps) => {
             <Card className='text-dark text-center rounded-circle' bg='dark'>
               <Card.Body>
                 <img
-                  src='https://brittanychiang.com/static/30a645f7db6038f83287d0c6042d3b2b/e9589/me.webp'
+                  src={avatarJPG}
                   alt='avatar'
                   className='mw-100 rounded-circle'
-                  style={{ filter: 'brightness(0.5)' }}
                 />
               </Card.Body>
             </Card>
-            <h3 className='text-center mt-3'>Brittany Chiang</h3>
+            <h3 className='text-center mt-3'>Duc Tran</h3>
+            <div className='text-center'>
+              <Button
+                variant='outline-dark'
+                className='rounded-circle'
+                style={{ width: 40, height: 40, margin: '0 0.25rem' }}
+              >
+                <FontAwesomeIcon icon={['fab', 'facebook-f']} className='text-dark' size='1x' />
+              </Button>
+              <Button
+                variant='outline-dark'
+                className='rounded-circle'
+                style={{ width: 40, height: 40, margin: '0 0.25rem' }}
+              >
+                <FontAwesomeIcon icon={['fab', 'github']} className='text-dark' size='1x' />
+              </Button>
+              <Button
+                variant='outline-dark'
+                className='rounded-circle'
+                style={{ width: 40, height: 40, margin: '0 0.25rem' }}
+              >
+                <FontAwesomeIcon icon={['fab', 'codepen']} className='text-dark' size='1x' />
+              </Button>
+              <Button
+                variant='outline-dark'
+                className='rounded-circle'
+                style={{ width: 40, height: 40, margin: '0 0.25rem' }}
+              >
+                <FontAwesomeIcon icon={['fab', 'linkedin']} className='text-dark' size='1x' />
+              </Button>
+            </div>
           </Col>
           <Col xs={12} sm={4}>
             <Card className='h-100 text-secondary' bg='dark'>
               <Card.Body>
+                <dl className='row'>
+                  <dt className='col-sm-2'>
+                    <FontAwesomeIcon icon={['fas', 'phone-square']} size='1x' />
+                  </dt>
+                  <dd className='col-sm-10'>(+84) 795825129</dd>
+
+                  <dt className='col-sm-2'>
+                    <FontAwesomeIcon icon={['fas', 'envelope-open-text']} size='1x' />
+                  </dt>
+                  <dd className='col-sm-10'>minhduc.tran.sgu@gmail.com</dd>
+
+                  <dt className='col-sm-2'>
+                    <FontAwesomeIcon icon={['fab', 'skype']} size='1x' />
+                  </dt>
+                  <dd className='col-sm-10'>minhduc.tran.sgu</dd>
+
+                  <dt className='col-sm-2 text-truncate'>
+                    <FontAwesomeIcon icon={['fas', 'map-marked-alt']} size='1x' />
+                  </dt>
+                  <dd className='col-sm-10'>Go Xoai, Binh Hung Hoa A, Binh Tan, HCMC</dd>
+                </dl>
                 <h3>Interesting</h3>
                 <Row>
                   <Col xs={4} className='mb-3'>
