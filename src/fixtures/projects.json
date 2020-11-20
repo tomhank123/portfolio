@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Random Quote Machine",
+    "body": "Building a custom multisite compatible WordPress plugin to build global search with Algolia",
+    "technologies": ["React JS", "Typescript", "Styled Component", "Bootstrap"]
+  },
+  {
+    "id": 2,
+    "title": "Markdown Previewer",
+    "body": "A single page web app for helping me choose where to travel, built with Next.js, Firebase, and Tailwind CSS",
+    "technologies": ["React JS", "Typescript", "Styled Component", "Bootstrap"]
+  },
+  {
+    "id": 3,
+    "title": "Drum Machine",
+    "body": "Find out how we built a custom headless CMS with Node, Express, and Firebase for a project at Upstatement",
+    "technologies": ["React JS", "Typescript", "Styled Component", "Bootstrap"]
+  },
+  {
+    "id": 4,
+    "title": "JavaScript Calculator",
+    "body": "A simple Google Keep clone built with Vue and Firebase.",
+    "technologies": ["React JS", "Typescript", "Styled Component", "Bootstrap"]
+  },
+  {
+    "id": 5,
+    "title": "25 + 5 Clock",
+    "body": "Embeddable web player widget for Apple Music that lets users log in and listen to full song playback in the browser leveraging MusicKit.js. Read more about this project on 9to5Mac.",
+    "technologies": ["React JS", "Typescript", "Styled Component", "Bootstrap"]
+  },
+  {
+    "id": 6,
+    "title": "IMDb Clone",
+    "body": "Facebook Messenger chat bot extension featuring authentication and full song streaming from within the Messenger app. Read more about it on The Verge.",
+    "technologies": ["React JS", "Typescript", "Styled Component", "Bootstrap"]
+  }
+]
