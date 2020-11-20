@@ -1,1 +1,9 @@
+export { default as Avatar } from './avatar';
+export { default as Button } from './button';
+export { default as Grid } from './grid';
 export { default as Header } from './header';
+export { default as Jumbotron } from './jumbotron';
+export { default as Technology } from './technology';
+export { default as Section } from './section';
+export { default as Project } from './project';
+export { default as Certificate } from './certificate';

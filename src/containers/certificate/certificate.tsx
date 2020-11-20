@@ -1,31 +1,32 @@
+import { Certificate, Grid, Section } from '@/components';
 import certificateData from '@/fixtures/certificates.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 import { FC } from 'react';
-import { Card, Col, Container, Row } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 
 interface IProps {}
 
 const CertificateContainer: FC<IProps> = (props: IProps) => {
   return (
-    <section className='bg-dark text-secondary py-4'>
+    <Section>
       <Container>
-        <h1 className='mb-3'>Certificates</h1>
-        <Row>
-          {certificateData.map((item, index) => (
-            <Col xs={6} sm={3} lg={2} className='mb-3' key={index}>
-              <Card className='h-100 text-dark text-center border-0' bg='secondary'>
-                <Card.Body>
-                  <FontAwesomeIcon icon={['fas', 'award']} className='text-dark mb-3' size='5x' />
-                  <h6>{item.title}</h6>
-                  <small className='text-dark'>{item.issuedBy}</small>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
+        <Section.Title prefix='06. '>Certificates</Section.Title>
+        <Section.Body>
+          <Grid sm={2} md={4} lg={6}>
+            {certificateData.map((item, index) => (
+              <Grid.Item className='mb-3' key={index}>
+                <Certificate>
+                  <FontAwesomeIcon icon={['fas', 'award']} className='mb-3' size='5x' />
+                  <Certificate.Title>{item.title}</Certificate.Title>
+                  <Certificate.Subtitle>{item.issuedBy}</Certificate.Subtitle>
+                </Certificate>
+              </Grid.Item>
+            ))}
+          </Grid>
+        </Section.Body>
       </Container>
-    </section>
+    </Section>
   );
 };
 

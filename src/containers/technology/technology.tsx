@@ -1,35 +1,33 @@
+import { Grid, Section, Technology } from '@/components';
 import technologiesData from '@/fixtures/technologies.json';
+import { IconName } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 import { FC } from 'react';
-import { Card, Col, Container, Row } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 
 interface IProps {}
 
 const TechnologyContainer: FC<IProps> = (props: IProps) => {
   return (
-    <section className='bg-dark text-secondary py-4'>
+    <Section>
       <Container>
-        <h1 className='mb-3'>Technologies</h1>
-        <Row>
-          {technologiesData.map((item, index) => (
-            <Col xs={6} sm={3} lg={2} className='mb-3' key={index}>
-              <Card className='h-100 shadow' bg='secondary'>
-                <Card.Body className='d-flex flex-column align-items-center justify-content-start bg-dark'>
-                  <img
-                    src={item.thumb}
-                    alt={item.title}
-                    className='w-75 mb-auto'
-                    style={{ filter: 'brightness(0.3)' }}
-                  />
-                  <h6>{item.title}</h6>
-                  <small className='text-muted'>{item.issuedBy}</small>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
+        <Section.Title prefix='02. '>Technologies</Section.Title>
+        <Section.Body>
+          <Grid sm={2} md={4} lg={6}>
+            {technologiesData.map((item, index) => (
+              <Grid.Item key={index}>
+                <Technology>
+                  <FontAwesomeIcon icon={['fab', item.icon as IconName]} className='mb-3' size='5x' />
+                  <Technology.Title>{item.title}</Technology.Title>
+                  <Technology.Subtitle>{item.issuedBy}</Technology.Subtitle>
+                </Technology>
+              </Grid.Item>
+            ))}
+          </Grid>
+        </Section.Body>
       </Container>
-    </section>
+    </Section>
   );
 };
 

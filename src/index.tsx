@@ -1,15 +1,21 @@
 import { fa } from '@/helpers';
+import { GlobalStyles } from '@/helpers/styles/global';
+import { theme } from '@/helpers/styles/helpers';
 import App from '@/main';
 import '@/scss/custom.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ThemeProvider } from 'styled-components';
 import reportWebVitals from './reportWebVitals';
 
 fa.init();
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

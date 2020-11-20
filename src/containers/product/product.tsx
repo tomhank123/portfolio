@@ -1,3 +1,5 @@
+import { Project, Section } from '@/components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 import { FC } from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
@@ -6,31 +8,46 @@ interface IProps {}
 
 const ProductContainer: FC<IProps> = (props: IProps) => {
   return (
-    <section className='bg-dark text-secondary py-4'>
+    <Section>
       <Container>
-        <Row>
-          <Col sm={4}>
-            <Card className='h-100 text-dark' bg='secondary'>
-              <Card.Body>
-                <h2>IMDb Clone</h2>
-                <p>A simple Google Keep clone built with Vue and Firebase.</p>
-                <p>
-                  <span className='text-dark'>Technologies: </span>
-                  <i>React JS, Hooks, Typescript</i>
-                </p>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col sm={8}>
-            <Card className='h-100 text-dark' bg='secondary'>
-              <Card.Body>
-                <img src='https://i.ytimg.com/vi/rm9kPoYhylw/maxresdefault.jpg' alt='my-product' className='mw-100' />
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
+        <Section.Body>
+          <Row>
+            <Col sm={4}>
+              <Project>
+                <Project.Header>
+                  <FontAwesomeIcon icon={['fas', 'external-link-alt']} size='lg' />
+                </Project.Header>
+                <Project.Body>
+                  <Project.Title>IMDb Clone</Project.Title>
+                  <Project.Text>
+                    Embeddable web player widget for Apple Music that lets users log in and listen to full song playback
+                    in the browser leveraging MusicKit.js. Read more about this project on 9to5Mac.
+                  </Project.Text>
+                </Project.Body>
+                <Project.Footer>
+                  <ul className='list-inline'>
+                    <li className='list-inline-item'>React JS</li>
+                    <li className='list-inline-item'>Hooks</li>
+                    <li className='list-inline-item'>Typescript</li>
+                  </ul>
+                </Project.Footer>
+              </Project>
+            </Col>
+            <Col sm={8}>
+              <Card bg='transparent'>
+                <Card.Body className='p-0'>
+                  <img
+                    src='https://i.ytimg.com/vi/rm9kPoYhylw/maxresdefault.jpg'
+                    alt='my-product'
+                    className='mw-100 rounded'
+                  />
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </Section.Body>
       </Container>
-    </section>
+    </Section>
   );
 };
 

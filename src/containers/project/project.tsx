@@ -1,30 +1,44 @@
+import { Grid, Project, Section } from '@/components';
+import projectData from '@/fixtures/projects.json';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 import { FC } from 'react';
-import { Card, Col, Container, Row } from 'react-bootstrap';
-import projectData from '@/fixtures/projects.json';
+import { Container } from 'react-bootstrap';
 
 interface IProps {}
 
 const ProjectContainer: FC<IProps> = (props: IProps) => {
   return (
-    <section className='bg-secondary text-dark py-4'>
+    <Section>
       <Container>
-        <h1 className='mb-3'>My Projects</h1>
-        <Row>
-          { projectData.map((project, index) => (
-            <Col xs={6} sm={3} lg={3} className='mb-3' key={index}>
-              <Card className='h-100' bg='dark'>
-                <Card.Body className='border-0 text-secondary'>
-                  <img src='https://i.ytimg.com/vi/rm9kPoYhylw/maxresdefault.jpg' alt='my-product' className='mw-100 mb-3' />
-                  <h6>{project.title}</h6>
-                  <small>A simple Google Keep clone built with Vue and Firebase.</small>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
+        <Section.Title prefix='07. '>My Projects</Section.Title>
+        <Section.Body>
+          <Grid sm={1} md={3} lg={3}>
+            {projectData.map((project, index) => (
+              <Grid.Item key={index}>
+                <Project>
+                  <Project.Header>
+                    <FontAwesomeIcon icon={['fas', 'external-link-alt']} size='lg' />
+                  </Project.Header>
+                  <Project.Body>
+                    <Project.Title>{project.title}</Project.Title>
+                    <Project.Text>{project.body}</Project.Text>
+                  </Project.Body>
+                  <Project.Footer>
+                    <ul className='list-inline'>
+                      {project.technologies.map(technology => (
+                        <li key={technology} className='list-inline-item'>{technology}</li>
+                      ))}
+                    </ul>
+                  </Project.Footer>
+                </Project>
+              </Grid.Item>
+            ))}
+          </Grid>
+          <p className='mt-3' style={{ color: '#64ffda'}}>View the archive </p>
+        </Section.Body>
       </Container>
-    </section>
+    </Section>
   );
 };
 
