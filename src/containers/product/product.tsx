@@ -2,17 +2,16 @@ import { Project, Section } from '@/components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 import { FC } from 'react';
-import { Card, Col, Container, Row } from 'react-bootstrap';
 
 interface IProps {}
 
-const ProductContainer: FC<IProps> = (props: IProps) => {
+const Productdiv: FC<IProps> = (props: IProps) => {
   return (
     <Section>
-      <Container>
+      <div>
         <Section.Body>
-          <Row>
-            <Col sm={4}>
+          <div>
+            <div>
               <Project>
                 <Project.Header>
                   <FontAwesomeIcon icon={['fas', 'external-link-alt']} size='lg' />
@@ -32,23 +31,23 @@ const ProductContainer: FC<IProps> = (props: IProps) => {
                   </ul>
                 </Project.Footer>
               </Project>
-            </Col>
-            <Col sm={8}>
-              <Card bg='transparent'>
-                <Card.Body className='p-0'>
+            </div>
+            <div>
+              <div>
+                <div className='p-0'>
                   <img
                     src='https://i.ytimg.com/vi/rm9kPoYhylw/maxresdefault.jpg'
                     alt='my-product'
                     className='mw-100 rounded'
                   />
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
+                </div>
+              </div>
+            </div>
+          </div>
         </Section.Body>
-      </Container>
+      </div>
     </Section>
   );
 };
 
-export default ProductContainer;
+export default Productdiv;

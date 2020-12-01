@@ -4,14 +4,13 @@ import { IconName } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 import { FC } from 'react';
-import { Container } from 'react-bootstrap';
 
 interface IProps {}
 
 const TechnologyContainer: FC<IProps> = (props: IProps) => {
   return (
     <Section>
-      <Container>
+      <div>
         <Section.Title prefix='02. '>Technologies</Section.Title>
         <Section.Body>
           <Grid sm={2} md={4} lg={6}>
@@ -26,7 +25,7 @@ const TechnologyContainer: FC<IProps> = (props: IProps) => {
             ))}
           </Grid>
         </Section.Body>
-      </Container>
+      </div>
     </Section>
   );
 };

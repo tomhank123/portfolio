@@ -1,9 +1,8 @@
-import { TTheme } from '@/helpers';
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background-color: ${(props: TTheme) => props.theme.colors.lightNavy};
-  border-radius: ${(props: TTheme) => props.theme.borderRadius};
+  background-color: ${props => props.theme.colors.lightNavy};
+  border-radius: ${props => props.theme.borderRadius};
   padding: 1rem;
 
   height: 100%;
@@ -20,10 +19,10 @@ export const Inner = styled.div`
 `;
 
 export const Title = styled.h6`
-  color: ${(props: TTheme) => props.theme.colors.lightestSlate};
+  color: ${props => props.theme.colors.lightestSlate};
 `;
 
 export const Subtitle = styled.small`
   margin-top: auto;
-  color: ${(props: TTheme) => props.theme.colors.lightSlate};
+  color: ${props => props.theme.colors.lightSlate};
 `;

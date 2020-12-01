@@ -2,26 +2,25 @@ import { Section } from '@/components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 import { FC } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
 
 interface IProps {}
 
-const ExperienceContainer: FC<IProps> = (props: IProps) => {
+const Experiencediv: FC<IProps> = (props: IProps) => {
   return (
     <Section>
-      <Container>
+      <div>
         <Section.Title prefix='04. '>Experiences</Section.Title>
         <Section.Body>
-          <Row>
-            <Col sm={3}>
+          <div>
+            <div>
               <p className='lead text-right' style={{ color: '#64ffda' }}>
                 <FontAwesomeIcon icon={['fab', 'uncharted']} size='2x' />
                 <FontAwesomeIcon icon={['fab', 'uncharted']} size='4x' />
                 <br />
                 <FontAwesomeIcon icon={['fab', 'uncharted']} size='3x' />
               </p>
-            </Col>
-            <Col sm={9}>
+            </div>
+            <div>
               {Array.from({ length: 5 }).map((_, index) => (
                 <div key={index}>
                   <div>
@@ -37,12 +36,12 @@ const ExperienceContainer: FC<IProps> = (props: IProps) => {
                   <hr />
                 </div>
               ))}
-            </Col>
-          </Row>
+            </div>
+          </div>
         </Section.Body>
-      </Container>
+      </div>
     </Section>
   );
 };
 
-export default ExperienceContainer;
+export default Experiencediv;

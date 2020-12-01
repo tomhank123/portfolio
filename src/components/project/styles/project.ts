@@ -1,9 +1,8 @@
-import { TTheme } from '@/helpers';
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background-color: ${(props: TTheme) => props.theme.colors.lightNavy};
-  border-radius: ${(props: TTheme) => props.theme.borderRadius};
+  background-color: ${props => props.theme.colors.lightNavy};
+  border-radius: ${props => props.theme.borderRadius};
   padding: 1.5rem;
 
   display: flex;
@@ -18,7 +17,7 @@ export const Header = styled.div`
   margin-bottom: 1rem;
 
   & > .svg-inline--fa {
-    color: ${(props: TTheme) => props.theme.colors.green};
+    color: ${props => props.theme.colors.green};
   }
 
   & > div {
@@ -28,7 +27,7 @@ export const Header = styled.div`
       cursor: pointer;
 
       &:hover {
-        color: ${(props: TTheme) => props.theme.colors.green};
+        color: ${props => props.theme.colors.green};
       }
     }
   }
@@ -43,9 +42,9 @@ export const Footer = styled.div`
 `;
 
 export const Title = styled.h3`
-  color: ${(props: TTheme) => props.theme.colors.lightestSlate};
+  color: ${props => props.theme.colors.lightestSlate};
 `;
 
 export const Text = styled.p`
-  color: ${(props: TTheme) => props.theme.colors.lightSlate};
+  color: ${props => props.theme.colors.lightSlate};
 `;

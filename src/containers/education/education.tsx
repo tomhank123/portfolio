@@ -2,26 +2,25 @@ import { Section } from '@/components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 import { FC } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
 
 interface IProps {}
 
-const EducationContainer: FC<IProps> = (props: IProps) => {
+const Educationdiv: FC<IProps> = (props: IProps) => {
   return (
     <Section>
-      <Container>
+      <div>
         <Section.Title prefix='05. '>Education</Section.Title>
         <Section.Body>
-          <Row>
-            <Col sm={3}>
+          <div>
+            <div>
               <p className='lead text-right' style={{ color: '#64ffda' }}>
                 <FontAwesomeIcon icon={['fab', 'uncharted']} size='2x' />
                 <FontAwesomeIcon icon={['fab', 'uncharted']} size='4x' />
                 <br/>
                 <FontAwesomeIcon icon={['fab', 'uncharted']} size='3x' />
               </p>
-            </Col>
-            <Col sm={9}>
+            </div>
+            <div>
               <div>
                 <h5>
                   Bachelor Degree <small style={{ color: '#64ffda'}}>@SaiGon University</small>
@@ -32,12 +31,12 @@ const EducationContainer: FC<IProps> = (props: IProps) => {
                   clicks, and subsequently customer purchases by 20%.
                 </p>
               </div>
-            </Col>
-          </Row>
+            </div>
+          </div>
         </Section.Body>
-      </Container>
+      </div>
     </Section>
   );
 };
 
-export default EducationContainer;
+export default Educationdiv;

@@ -1,8 +1,6 @@
-import { fa } from '@/helpers';
-import { GlobalStyles } from '@/helpers/styles/global';
-import { theme } from '@/helpers/styles/helpers';
 import App from '@/main';
-import '@/scss/custom.scss';
+import { GlobalStyle, theme } from '@/styles';
+import fa from '@/utils/fontAwesome';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ThemeProvider } from 'styled-components';
@@ -13,7 +11,7 @@ fa.init();
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <GlobalStyles />
+      <GlobalStyle />
       <App />
     </ThemeProvider>
   </React.StrictMode>,

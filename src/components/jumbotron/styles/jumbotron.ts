@@ -1,4 +1,3 @@
-import { TTheme } from '@/helpers';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -11,7 +10,7 @@ export const Inner = styled.div`
 `;
 
 export const Prefix = styled.h1`
-  color: ${(props: TTheme) => props.theme.colors.green};
+  color: ${props => props.theme.colors.green};
   margin: 0px 0px 10px 4px;
   font-weight: 400;
   font-size: clamp(14px, 5vw, 16px);
@@ -19,7 +18,7 @@ export const Prefix = styled.h1`
 `;
 
 export const Title = styled.h2`
-  color: ${(props: TTheme) => props.theme.colors.lightestSlate};
+  color: ${props => props.theme.colors.lightestSlate};
   margin: 0px;
   font-size: clamp(40px, 8vw, 80px);
 
