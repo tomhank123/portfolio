@@ -10,3 +10,4 @@ export { default as SkillContainer } from './skill';
 export { default as ExperienceContainer } from './experience';
 export { default as EducationContainer } from './education';
 export { default as SocialContainer } from './social';
+export { default as EmailContainer } from './email';

@@ -10,13 +10,15 @@ import {
   ProjectContainer,
   SkillContainer,
   TechnologyContainer,
-  SocialContainer
+  SocialContainer,
+  EmailContainer
 } from '@/containers';
 import * as React from 'react';
 
 const App = () => {
   return (
     <div className='App'>
+      <EmailContainer />
       <SocialContainer />
       <HeaderContainer />
       <JumbotronContainer />
