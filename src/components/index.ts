@@ -10,3 +10,4 @@ export { default as Project } from './project';
 export { default as Certificate } from './certificate';
 export { default as Social } from './social';
 export { default as Email } from './email';
+export { default as Layout } from './layout';

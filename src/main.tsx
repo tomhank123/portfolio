@@ -4,34 +4,33 @@ import {
   ContactContainer,
   EducationContainer,
   ExperienceContainer,
-  HeaderContainer,
   JumbotronContainer,
+  LayoutContainer,
   ProductContainer,
   ProjectContainer,
   SkillContainer,
   TechnologyContainer,
-  SocialContainer,
-  EmailContainer
 } from '@/containers';
 import * as React from 'react';
 
 const App = () => {
   return (
-    <div className='App'>
-      <EmailContainer />
-      <SocialContainer />
-      <HeaderContainer />
-      <JumbotronContainer />
-      <BiographyContainer />
-      <TechnologyContainer />
-      <SkillContainer />
-      <ExperienceContainer />
-      <EducationContainer />
-      <CertificateContainer />
-      <ProjectContainer />
-      <ProductContainer />
-      <ContactContainer />
-    </div>
+    <LayoutContainer>
+      { false && (
+        <>
+          <JumbotronContainer />
+          <BiographyContainer />
+          <TechnologyContainer />
+          <SkillContainer />
+          <ExperienceContainer />
+          <EducationContainer />
+          <CertificateContainer />
+          <ProjectContainer />
+          <ProductContainer />
+          <ContactContainer />
+        </>
+      )}
+    </LayoutContainer>
   );
 };
 

@@ -14,7 +14,7 @@ const SocialContainer: FC<IProps> = (props: IProps) => {
           {config.socialMedia &&
             config.socialMedia.map(({ url, name }, index) => (
               <Social.Item key={index}>
-                <Social.Link href={url} aria-label={name}>
+                <Social.Link href={url} target='_blank' aria-label={name}>
                   <Icon name={name} />
                 </Social.Link>
               </Social.Item>
