@@ -15,6 +15,8 @@
     "animejs": "^3.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^5.2.0",
     "styled-components": "^5.2.1",
     "typescript": "^4.0.5",
     "web-vitals": "^0.2.4"
@@ -51,6 +53,8 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "@types/animejs": "^3.1.2",
+    "@types/react-helmet": "^6.1.0",
+    "@types/react-router-dom": "^5.1.6",
     "@types/styled-components": "^5.1.4",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-loader": "^4.0.2",

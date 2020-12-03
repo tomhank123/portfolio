@@ -1,36 +1,20 @@
-import {
-  BiographyContainer,
-  CertificateContainer,
-  ContactContainer,
-  EducationContainer,
-  ExperienceContainer,
-  JumbotronContainer,
-  LayoutContainer,
-  ProductContainer,
-  ProjectContainer,
-  SkillContainer,
-  TechnologyContainer,
-} from '@/containers';
+import routes from '@/routes';
 import * as React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { NotFoundContainer } from './containers';
 
 const App = () => {
   return (
-    <LayoutContainer>
-      { false && (
-        <>
-          <JumbotronContainer />
-          <BiographyContainer />
-          <TechnologyContainer />
-          <SkillContainer />
-          <ExperienceContainer />
-          <EducationContainer />
-          <CertificateContainer />
-          <ProjectContainer />
-          <ProductContainer />
-          <ContactContainer />
-        </>
-      )}
-    </LayoutContainer>
+    <div>
+      <Router>
+        <Switch>
+          {routes.map((route) => (
+            <Route key={route.path} exact path={route.path} component={route.component} />
+          ))}
+          <Route component={NotFoundContainer} />
+        </Switch>
+      </Router>
+    </div>
   );
 };
 

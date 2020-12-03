@@ -1,3 +1,4 @@
+export { default as NotFound } from './notfound';
 export { default as Side } from './side';
 export { default as Avatar } from './avatar';
 export { default as Button } from './button';
