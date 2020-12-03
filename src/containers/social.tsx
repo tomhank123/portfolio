@@ -4,11 +4,13 @@ import config from '@/config';
 import * as React from 'react';
 import { FC } from 'react';
 
-interface IProps {}
+interface IProps {
+  isHome: boolean;
+}
 
-const SocialContainer: FC<IProps> = (props: IProps) => {
+const SocialContainer: FC<IProps> = ({ isHome }: IProps) => {
   return (
-    <Side orientation='left'>
+    <Side isHome={isHome} orientation='left'>
       <Social>
         <Social.List>
           {config.socialMedia &&

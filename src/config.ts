@@ -22,5 +22,24 @@ export default {
       name: 'Twitter',
       url: 'https://www.facebook.com/minhduc.tran.sgu',
     },
-  ]
+  ],
+
+  navLinks: [
+    {
+      name: 'About',
+      url: '/#about',
+    },
+    {
+      name: 'Experience',
+      url: '/#jobs',
+    },
+    {
+      name: 'Work',
+      url: '/#projects',
+    },
+    {
+      name: 'Contact',
+      url: '/#contact',
+    },
+  ],
 };

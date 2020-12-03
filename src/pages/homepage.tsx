@@ -9,14 +9,17 @@ import {
   ProductContainer,
   ProjectContainer,
   SkillContainer,
-  TechnologyContainer,
+  TechnologyContainer
 } from '@/containers';
 import * as React from 'react';
+import { Helmet } from 'react-helmet';
 
 const App = () => {
   return (
     <LayoutContainer>
-      { false && (
+      <Helmet title='Duc Tran' />
+
+      {false && (
         <>
           <JumbotronContainer />
           <BiographyContainer />

@@ -3,11 +3,13 @@ import config from '@/config';
 import * as React from 'react';
 import { FC } from 'react';
 
-interface IProps {}
+interface IProps {
+  isHome: boolean;
+}
 
-const EmailContainer: FC<IProps> = (props: IProps) => {
+const EmailContainer: FC<IProps> = ({ isHome }: IProps) => {
   return (
-    <Side orientation='right'>
+    <Side isHome={isHome} orientation='right'>
       <Email>
         <Email.Link href={`mailto:${config.email}`}>{config.email}</Email.Link>
       </Email>

@@ -9,12 +9,11 @@ import reportWebVitals from './reportWebVitals';
 fa.init();
 
 ReactDOM.render(
-  <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <App />
-    </ThemeProvider>
-  </React.StrictMode>,
+  // <React.StrictMode></React.StrictMode>
+  <ThemeProvider theme={theme}>
+    <GlobalStyle />
+    <App />
+  </ThemeProvider>,
   document.getElementById('root')
 );
 

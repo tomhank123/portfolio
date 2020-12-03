@@ -11,7 +11,7 @@ export { default as ExperienceContainer } from './sections/experience';
 export { default as JumbotronContainer } from './sections/jumbotron';
 export { default as ProductContainer } from './sections/product';
 export { default as ProjectContainer } from './sections/project';
+export { default as SkillContainer } from './sections/skill';
 export { default as TechnologyContainer } from './sections/technology';
-export { default as SkillContainer } from './skill';
 export { default as SocialContainer } from './social';
 export { default as LayoutContainer } from './layout';

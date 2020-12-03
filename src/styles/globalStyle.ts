@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import Fonts from './fonts';
+import TransitionStyles from './transitionStyles';
 
 const GlobalStyles = createGlobalStyle`
   ${Fonts};
@@ -147,6 +148,8 @@ const GlobalStyles = createGlobalStyle`
       color: var(--green);
     }
   }
+
+  ${TransitionStyles};
 `;
 
 export default GlobalStyles;
