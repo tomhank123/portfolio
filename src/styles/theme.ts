@@ -1,4 +1,7 @@
-const theme = {
+import { DefaultTheme } from 'styled-components';
+import mixins from './mixins';
+
+const theme: DefaultTheme = {
   bp: {
     mobileS: 'max-width: 330px',
     mobileM: 'max-width: 400px',
@@ -23,7 +26,8 @@ const theme = {
     white: '#e6f1ff',
     green: '#64ffda',
     greenTint: 'rgba(100,255,218,0.1)'
-  }
+  },
+  mixins
 };
 
 export default theme;

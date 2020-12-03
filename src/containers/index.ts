@@ -12,4 +12,5 @@ export { default as ExperienceContainer } from './experience';
 export { default as EducationContainer } from './education';
 export { default as SocialContainer } from './social';
 export { default as EmailContainer } from './email';
+export { default as LoaderContainer } from './loader';
 export { default as LayoutContainer } from './layout';
