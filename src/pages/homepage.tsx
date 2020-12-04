@@ -20,9 +20,9 @@ const App = () => {
       <Helmet title='Duc Tran' />
 
       <main className='fill-height'>
+        <JumbotronContainer />
         {false && (
           <>
-            <JumbotronContainer />
             <BiographyContainer />
             <TechnologyContainer />
             <SkillContainer />

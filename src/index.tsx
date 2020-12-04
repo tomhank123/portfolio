@@ -9,7 +9,6 @@ import reportWebVitals from './reportWebVitals';
 fa.init();
 
 ReactDOM.render(
-  // <React.StrictMode></React.StrictMode>
   <ThemeProvider theme={theme}>
     <GlobalStyle />
     <App />

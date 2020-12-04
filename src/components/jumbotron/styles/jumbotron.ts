@@ -1,41 +1,42 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-`;
-
-export const Inner = styled.div`
-  height: 100vh;
-  display: flex;
-  align-items: center;
+export const Container = styled.section`
+  ${({ theme }) => theme.mixins.flexCenter};
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100vh;
 `;
 
 export const Prefix = styled.h1`
-  color: ${props => props.theme.colors.green};
-  margin: 0px 0px 10px 4px;
+  margin: 0 0 30px 4px;
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
   font-weight: 400;
-  font-size: clamp(14px, 5vw, 16px);
-  line-height: 1.1;
+
+  @media (max-width: 480px) {
+    margin: 0 0 20px 2px;
+  }
 `;
 
 export const Title = styled.h2`
-  color: ${props => props.theme.colors.lightestSlate};
-  margin: 0px;
-  font-size: clamp(40px, 8vw, 80px);
-
-  line-height: 1.1;
-  font-weight: 600;
+  ${({ theme }) => theme.mixins.bigHeading};
 `;
 
 export const Subtitle = styled.h3`
-  margin: 0px;
-  font-size: clamp(40px, 8vw, 80px);
+  ${({ theme }) => theme.mixins.bigHeading};
 
   margin-top: 10px;
-  font-weight: 600;
+  color: var(--slate);
+  line-height: 0.9;
 `;
 
-export const Text = styled.div`
-  margin: 20px 0px 0px;
+export const Text = styled.p`
+  margin: 20px 0 0;
   max-width: 500px;
-  margin-bottom: 1rem;
+`;
+
+export const EmailLink = styled.a`
+  ${({ theme }) => theme.mixins.bigButton};
+  margin-top: 50px;
 `;

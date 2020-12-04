@@ -5,16 +5,14 @@ import { NotFoundPage } from '@/pages';
 
 const App = () => {
   return (
-    <div>
-      <Router>
-        <Switch>
-          {routes.map((route) => (
-            <Route key={route.path} exact path={route.path} component={route.component} />
-          ))}
-          <Route component={NotFoundPage} />
-        </Switch>
-      </Router>
-    </div>
+    <Router>
+      <Switch>
+        {routes.map((route) => (
+          <Route key={route.path} exact path={route.path} component={route.component} />
+        ))}
+        <Route component={NotFoundPage} />
+      </Switch>
+    </Router>
   );
 };
 

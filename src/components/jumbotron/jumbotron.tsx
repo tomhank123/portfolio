@@ -1,12 +1,8 @@
 import * as React from 'react';
-import { Container, Inner, Prefix, Subtitle, Text, Title } from './styles/jumbotron';
+import { Container, Subtitle, Text, Title, EmailLink, Prefix } from './styles/jumbotron';
 
 const Jumbotron = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
-  return (
-    <Container {...restProps}>
-      <Inner>{children}</Inner>
-    </Container>
-  );
+  return <Container {...restProps}>{children}</Container>;
 };
 
 Jumbotron.Prefix = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
@@ -23,6 +19,10 @@ Jumbotron.Subtitle = ({ children, ...restProps }: React.HTMLAttributes<HTMLEleme
 
 Jumbotron.Text = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
   return <Text {...restProps}>{children}</Text>;
+};
+
+Jumbotron.EmailLink = ({ children, ...restProps }: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
+  return <EmailLink {...restProps}>{children}</EmailLink>;
 };
 
 export default Jumbotron;
