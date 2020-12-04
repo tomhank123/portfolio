@@ -28,7 +28,7 @@ const JumbotronContainer: FC<IProps> = (props: IProps) => {
   const items = [one, two, three, four, five];
 
   return (
-    <Jumbotron>
+    <Jumbotron id='hero'>
       <TransitionGroup component={null}>
         {isMounted &&
           items.map((item, i) => (

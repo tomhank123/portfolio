@@ -14,22 +14,22 @@ import {
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
-const App = () => {
+const Homepage = () => {
   return (
     <LayoutContainer>
       <Helmet title='Duc Tran' />
 
-      <main className='fill-height'>
+      <main className='fill-height' style={{ counterReset: 'section' }}>
         <JumbotronContainer />
+        <BiographyContainer />
         {false && (
           <>
-            <BiographyContainer />
+            <ProjectContainer />
             <TechnologyContainer />
             <SkillContainer />
             <ExperienceContainer />
             <EducationContainer />
             <CertificateContainer />
-            <ProjectContainer />
             <ProductContainer />
             <ContactContainer />
           </>
@@ -39,4 +39,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Homepage;
