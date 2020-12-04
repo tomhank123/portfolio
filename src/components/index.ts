@@ -3,6 +3,7 @@ export { default as Side } from './side';
 export { default as Avatar } from './avatar';
 export { default as Button } from './button';
 export { default as Biography } from './biography';
+export { default as Contact } from './contact';
 export { default as Grid } from './grid';
 export { default as Header } from './header';
 export { default as Footer } from './footer';

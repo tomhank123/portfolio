@@ -23,6 +23,7 @@ const Homepage = () => {
         <JumbotronContainer />
         <BiographyContainer />
         <ProjectContainer />
+        <ContactContainer />
         {false && (
           <>
             <TechnologyContainer />
@@ -31,7 +32,6 @@ const Homepage = () => {
             <EducationContainer />
             <CertificateContainer />
             <ProductContainer />
-            <ContactContainer />
           </>
         )}
       </main>

@@ -15,7 +15,7 @@ const ProjectContainer: FC<IProps> = (props: IProps) => {
   const projectsToShow = showMore ? projectData : firstSix;
 
   return (
-    <Project>
+    <Project id='projects'>
       <Project.Heading>Other Noteworthy Projects</Project.Heading>
       <Project.ArchiveLink className='inline-link' to='/archive'>
         view the archive

@@ -1,4 +1,5 @@
-import { Button, Section } from '@/components';
+import { Contact } from '@/components';
+import config from '@/config';
 import * as React from 'react';
 import { FC } from 'react';
 
@@ -6,22 +7,15 @@ interface IProps {}
 
 const ContactContainer: FC<IProps> = (props: IProps) => {
   return (
-    <Section className='py-5'>
-      <div>
-        <Section.Body>
-          <div>
-            <div className='text-center'>
-              <h1 className='mb-3'>Get In Touch</h1>
-              <p className='lead'>
-                Are you working on something great? I would love to help make it happen! Drop me a letter and start your
-                project right now! Just do it.
-              </p>
-              <Button>Say Hello</Button>
-            </div>
-          </div>
-        </Section.Body>
-      </div>
-    </Section>
+    <Contact>
+      <Contact.Overline>What’s Next?</Contact.Overline>
+      <Contact.Title>Get In Touch</Contact.Title>
+      <p>
+        Although I'm not currently looking for any new opportunities, my inbox is always open. Whether you have a
+        question or just want to say hi, I'll try my best to get back to you!
+      </p>
+      <Contact.EmailLink href={`mailto:${config.email}`}>Say Hello</Contact.EmailLink>
+    </Contact>
   );
 };
 
