@@ -4,6 +4,7 @@ import {
   ContactContainer,
   EducationContainer,
   ExperienceContainer,
+  FeaturedContainer,
   JumbotronContainer,
   LayoutContainer,
   ProjectContainer,
@@ -21,6 +22,7 @@ const Homepage = () => {
       <main className='fill-height' style={{ counterReset: 'section' }}>
         <JumbotronContainer />
         <BiographyContainer />
+        <FeaturedContainer />
         <ProjectContainer />
         <ContactContainer />
         {false && (
