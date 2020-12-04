@@ -1,8 +1,19 @@
 import * as React from 'react';
 import { Container, Text, Pic, Inner, Heading } from './styles/biography';
+import { useEffect, useRef } from 'react';
+import config from '@/config';
+import sr from '@/utils/sr';
 
 const Biography = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
-  return <Container {...restProps}>{children}</Container>;
+  const revealContainer = useRef(null);
+
+  useEffect(() => {
+    if (sr) {
+      sr.reveal(revealContainer.current as any, config.srConfig())
+    }
+  }, []);
+
+  return <Container ref={revealContainer} {...restProps}>{children}</Container>;
 };
 
 Biography.Inner = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {

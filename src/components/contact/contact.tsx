@@ -1,8 +1,19 @@
+import config from '@/config';
+import sr from '@/utils/sr';
 import * as React from 'react';
-import { Container, Title, Overline, EmailLink } from './styles/contact';
+import { useEffect, useRef } from 'react';
+import { Container, EmailLink, Overline, Title } from './styles/contact';
 
 const Contact = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
-  return <Container {...restProps}>{children}</Container>;
+  const revealContainer = useRef(null);
+
+  useEffect(() => {
+    if (sr) {
+      sr.reveal(revealContainer.current as any, config.srConfig())
+    }
+  }, []);
+
+  return <Container ref={revealContainer} {...restProps}>{children}</Container>;
 };
 
 Contact.Overline = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
