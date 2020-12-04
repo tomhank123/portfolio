@@ -1,34 +1,59 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
-import { Container, Header, Body, Footer, Title, Text } from './styles/project';
+import { LinkProps } from 'react-router-dom';
+import {
+  ArchiveLink,
+  Container,
+  Grid,
+  Heading,
+  Item,
+  ItemDescription,
+  ItemInner,
+  ItemTechList,
+  ItemTitle,
+  ItemTop,
+  MoreButton,
+  ItemLinks,
+} from './styles/project';
 
 const Project = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
   return <Container {...restProps}>{children}</Container>;
 };
 
-Project.Header = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
-  return (
-    <Header {...restProps}>
-      <FontAwesomeIcon icon={['far', 'folder-open']} size='3x' />
-      <div>{children}</div>
-    </Header>
-  );
+Project.Heading = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
+  return <Heading {...restProps}>{children}</Heading>;
 };
 
-Project.Body = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
-  return <Body {...restProps}>{children}</Body>;
+Project.ArchiveLink = ({ children, ...restProps }: LinkProps) => {
+  return <ArchiveLink {...restProps}>{children}</ArchiveLink>;
 };
 
-Project.Footer = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
-  return <Footer {...restProps}>{children}</Footer>;
+Project.MoreButton = ({ children, ...restProps }: React.ButtonHTMLAttributes<HTMLButtonElement>) => {
+  return <MoreButton {...restProps}>{children}</MoreButton>;
 };
 
-Project.Title = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
-  return <Title {...restProps}>{children}</Title>;
+Project.Grid = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
+  return <Grid {...restProps}>{children}</Grid>;
 };
-
-Project.Text = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
-  return <Text {...restProps}>{children}</Text>;
+Project.Item = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
+  return <Item {...restProps}>{children}</Item>;
+};
+Project.ItemDescription = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
+  return <ItemDescription {...restProps}>{children}</ItemDescription>;
+};
+Project.ItemLinks = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
+  return <ItemLinks {...restProps}>{children}</ItemLinks>;
+};
+Project.ItemInner = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
+  return <ItemInner {...restProps}>{children}</ItemInner>;
+};
+Project.ItemTechList = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
+  return <ItemTechList {...restProps}>{children}</ItemTechList>;
+};
+Project.ItemTitle = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
+  return <ItemTitle {...restProps}>{children}</ItemTitle>;
+};
+Project.ItemTop = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
+  return <ItemTop {...restProps}>{children}</ItemTop>;
 };
 
 export default Project;

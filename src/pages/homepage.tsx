@@ -22,9 +22,9 @@ const Homepage = () => {
       <main className='fill-height' style={{ counterReset: 'section' }}>
         <JumbotronContainer />
         <BiographyContainer />
+        <ProjectContainer />
         {false && (
           <>
-            <ProjectContainer />
             <TechnologyContainer />
             <SkillContainer />
             <ExperienceContainer />
