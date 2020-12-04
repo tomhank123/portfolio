@@ -9,7 +9,6 @@ export { default as ContactContainer } from './sections/contact';
 export { default as EducationContainer } from './sections/education';
 export { default as ExperienceContainer } from './sections/experience';
 export { default as JumbotronContainer } from './sections/jumbotron';
-export { default as ProductContainer } from './sections/product';
 export { default as ProjectContainer } from './sections/project';
 export { default as SkillContainer } from './sections/skill';
 export { default as TechnologyContainer } from './sections/technology';

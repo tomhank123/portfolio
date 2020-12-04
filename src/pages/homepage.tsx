@@ -6,7 +6,6 @@ import {
   ExperienceContainer,
   JumbotronContainer,
   LayoutContainer,
-  ProductContainer,
   ProjectContainer,
   SkillContainer,
   TechnologyContainer,
@@ -31,7 +30,6 @@ const Homepage = () => {
             <ExperienceContainer />
             <EducationContainer />
             <CertificateContainer />
-            <ProductContainer />
           </>
         )}
       </main>
