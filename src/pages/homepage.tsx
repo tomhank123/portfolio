@@ -10,6 +10,7 @@ import {
   ProjectContainer,
   SkillContainer,
   TechnologyContainer,
+  JobsContainer
 } from '@/containers';
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
@@ -22,6 +23,7 @@ const Homepage = () => {
       <main className='fill-height' style={{ counterReset: 'section' }}>
         <JumbotronContainer />
         <BiographyContainer />
+        <JobsContainer />
         <FeaturedContainer />
         <ProjectContainer />
         <ContactContainer />

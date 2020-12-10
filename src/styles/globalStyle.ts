@@ -35,7 +35,7 @@ const GlobalStyles = createGlobalStyle`
     --nav-scroll-height: 70px;
 
     --tab-height: 42px;
-    --tab-width: 120px;
+    --tab-width: 160px;
 
     --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
     --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -186,6 +186,12 @@ const GlobalStyles = createGlobalStyle`
     &:focus {
       color: var(--green);
     }
+  }
+
+  button {
+    cursor: pointer;
+    border: 0;
+    border-radius: 0;
   }
 
   ${TransitionStyles};

@@ -12,6 +12,7 @@ export { default as Technology } from './technology';
 export { default as Section } from './section';
 export { default as Project } from './project';
 export { default as Featured } from './featured';
+export { default as Jobs } from './jobs';
 export { default as Certificate } from './certificate';
 export { default as Social } from './social';
 export { default as Email } from './email';

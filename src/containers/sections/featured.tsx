@@ -16,7 +16,7 @@ const FeaturedContainer: FC<IProps> = (props: IProps) => {
       <div>
         {projectsToShow &&
           projectsToShow.map(({ title, github, html, external, technologies, cover }, i) => (
-            <Featured.Project>
+            <Featured.Project key={i}>
               <Featured.Content>
                 <Featured.Overline>Featured Project</Featured.Overline>
                 <Featured.Title>{title}</Featured.Title>

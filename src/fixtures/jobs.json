@@ -1,0 +1,35 @@
+[
+  {
+    "node": {
+      "frontmatter": {
+        "title": "Front-end Engineer",
+        "url": "https://devblock.net/",
+        "company": "Devblock Vietnam",
+        "range": "Jun 2018 - Present"
+      },
+      "html": "<ul><li>Write modern, performant, maintainable code for a diverse array of client and internal projects</li><li>Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Gatsby, React, Craft, WordPress, Prismic, and Netlify</li><li>Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis</li></ul>"
+    }
+  },
+  {
+    "node": {
+      "frontmatter": {
+        "title": "Front-end Developer",
+        "url": "https://www.nhn.com/asia/vn/company/companyInfo.nhn",
+        "company": "NHN VietNam",
+        "range": "Aug 2017 - Jun 2018"
+      },
+      "html": "<ul><li>Write modern, performant, maintainable code for a diverse array of client and internal projects</li><li>Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Gatsby, React, Craft, WordPress, Prismic, and Netlify</li><li>Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis</li></ul>"
+    }
+  },
+  {
+    "node": {
+      "frontmatter": {
+        "title": "Front-end Developer",
+        "url": "https://imad.com.vn/",
+        "company": "IMAD Technology",
+        "range": "May 2016 - Jun 2017"
+      },
+      "html": "<ul><li>Write modern, performant, maintainable code for a diverse array of client and internal projects</li><li>Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Gatsby, React, Craft, WordPress, Prismic, and Netlify</li><li>Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis</li></ul>"
+    }
+  }
+]
