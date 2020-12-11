@@ -1,15 +1,28 @@
 import { Project } from '@/components';
 import { Icon } from '@/components/icons';
+import config from '@/config';
 import { GRID_LIMIT } from '@/constants';
 import projectData from '@/fixtures/projects.json';
+import sr from '@/utils/sr';
 import * as React from 'react';
-import { FC, useState } from 'react';
+import { FC, useEffect, useState, useRef } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 interface IProps {}
 
 const ProjectContainer: FC<IProps> = (props: IProps) => {
   const [showMore, setShowMore] = useState(false);
+  const revealTitle = useRef(null);
+  const revealArchiveLink = useRef(null);
+  const revealProjects = useRef([]);
+
+  useEffect(() => {
+    if (sr) {
+      sr.reveal(revealTitle.current as any, config.srConfig());
+      sr.reveal(revealArchiveLink.current as any, config.srConfig());
+      revealProjects.current.forEach((ref, i) => sr && sr.reveal(ref, config.srConfig(i * 100)));
+    }
+  }, []);
 
   const firstSix = projectData.slice(0, GRID_LIMIT);
   const projectsToShow = showMore ? projectData : firstSix;

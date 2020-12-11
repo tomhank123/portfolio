@@ -5,6 +5,7 @@ export { default as Button } from './button';
 export { default as Biography } from './biography';
 export { default as Contact } from './contact';
 export { default as Grid } from './grid';
+export { default as Table } from './table';
 export { default as Header } from './header';
 export { default as Footer } from './footer';
 export { default as Jumbotron } from './jumbotron';

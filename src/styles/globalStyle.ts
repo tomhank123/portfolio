@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import Fonts from './fonts';
+import mixins from './mixins';
 import TransitionStyles from './transitionStyles';
 
 const GlobalStyles = createGlobalStyle`
@@ -192,6 +193,38 @@ const GlobalStyles = createGlobalStyle`
     cursor: pointer;
     border: 0;
     border-radius: 0;
+  }
+
+  .big-heading {
+    margin: 0;
+    font-size: clamp(40px, 8vw, 80px);
+  }
+
+  .overline {
+    color: var(--green);
+    font-family: var(--font-mono);
+    font-size: var(--fz-md);
+    font-weight: 400;
+  }
+
+  .subtitle {
+    color: var(--green);
+    margin: 0 0 20px 0;
+    font-size: var(--fz-md);
+    font-family: var(--font-mono);
+    font-weight: 400;
+    line-height: 1.5;
+    @media (max-width: 1080px) {
+      font-size: var(--fz-sm);
+    }
+    @media (max-width: 768px) {
+      font-size: var(--fz-xs);
+    }
+
+    a {
+      ${({ theme }) => mixins.inlineLink};
+      line-height: 1.5;
+    }
   }
 
   ${TransitionStyles};
