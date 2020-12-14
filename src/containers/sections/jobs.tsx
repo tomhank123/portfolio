@@ -22,7 +22,7 @@ const JobsContainer: FC<IProps> = (props: IProps) => {
     <Jobs id='jobs' ref={revealContainer}>
       <Jobs.Heading>Where I’ve Worked</Jobs.Heading>
       <Jobs.Inner>
-        <Jobs.TabList role='tablist' aria-label='Job tabs'>
+        <Jobs.TabList role='tablist' aria-label='Job tabs'>4
           {jobsData &&
             jobsData.map(({ node }, i) => {
               const { company } = node.frontmatter;

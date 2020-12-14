@@ -73,8 +73,8 @@ type Featured = React.ForwardRefExoticComponent<FeaturedProps> & {
   Title: typeof FeaturedTitle;
 };
 
-const Featured = React.forwardRef<HTMLDivElement, FeaturedProps>(({ children }: FeaturedProps, ref) => {
-  return <Container ref={ref}>{children}</Container>;
+const Featured = React.forwardRef<HTMLDivElement, FeaturedProps>(({ children, id }: FeaturedProps, ref) => {
+  return <Container id={id} ref={ref}>{children}</Container>;
 }) as Featured;
 
 Featured.displayName = 'Featured';

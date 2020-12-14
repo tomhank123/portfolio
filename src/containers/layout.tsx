@@ -1,7 +1,7 @@
 import { Layout } from '@/components';
 import { EmailContainer, FooterContainer, HeaderContainer, LoaderContainer, SocialContainer } from '@/containers';
 import * as React from 'react';
-import { FC, useState } from 'react';
+import { FC, useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 interface IProps {
@@ -11,7 +11,23 @@ interface IProps {
 const LayoutContainer: FC<IProps> = ({ children }: IProps) => {
   const location = useLocation();
   const isHome = location.pathname === '/';
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(isHome);
+
+  useEffect(() => {
+    if (isLoading) {
+      return;
+    }
+    if (location.hash) {
+      const id = location.hash.substring(1); // location.hash without the '#'
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView();
+          el.focus();
+        }
+      }, 0);
+    }
+  }, [isLoading, location.hash]);
 
   return (
     <>

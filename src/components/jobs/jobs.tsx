@@ -63,8 +63,8 @@ type Jobs = React.ForwardRefExoticComponent<JobsProps> & {
   TabButton: typeof JobsTabButton;
 };
 
-const Jobs = React.forwardRef<HTMLDivElement, JobsProps>(({ children }: JobsProps, ref) => {
-  return <Container ref={ref}>{children}</Container>;
+const Jobs = React.forwardRef<HTMLDivElement, JobsProps>(({ children, id }: JobsProps, ref) => {
+  return <Container id={id} ref={ref}>{children}</Container>;
 }) as Jobs;
 
 Jobs.displayName = 'Jobs';

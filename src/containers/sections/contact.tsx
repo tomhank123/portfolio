@@ -7,7 +7,7 @@ interface IProps {}
 
 const ContactContainer: FC<IProps> = (props: IProps) => {
   return (
-    <Contact>
+    <Contact id='contact'>
       <Contact.Overline>What’s Next?</Contact.Overline>
       <Contact.Title>Get In Touch</Contact.Title>
       <p>

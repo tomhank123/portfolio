@@ -86,8 +86,8 @@ type Project = React.ForwardRefExoticComponent<ProjectProps> & {
   ItemLinks: typeof ProjectItemLinks;
 };
 
-const Project = React.forwardRef<HTMLDivElement, ProjectProps>(({ children }: ProjectProps, ref) => {
-  return <Container ref={ref}>{children}</Container>;
+const Project = React.forwardRef<HTMLDivElement, ProjectProps>(({ children, id }: ProjectProps, ref) => {
+  return <Container id={id} ref={ref}>{children}</Container>;
 }) as Project;
 
 Project.displayName = 'Project';
