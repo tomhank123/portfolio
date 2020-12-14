@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import * as React from 'react';
 import {
   Container,
@@ -12,44 +13,82 @@ import {
   Title,
 } from './styles/featured';
 
-const Featured = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
-  return <Container {...restProps}>{children}</Container>;
+interface FeaturedProps extends React.HTMLProps<HTMLElement> {
+  show?: boolean;
+}
+
+const defaultProps = {
+  show: true,
 };
 
-Featured.Heading = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
-  return <Heading {...restProps}>{children}</Heading>;
+const propTypes = {
+  show: PropTypes.bool,
 };
 
-Featured.Project = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
-  return <Project {...restProps}>{children}</Project>;
-};
+const FeaturedHeading = React.forwardRef<HTMLHeadingElement, React.ComponentProps<'h2'>>((restProps, ref) => (
+  <Heading {...restProps} ref={ref} />
+));
 
-Featured.Content = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
+const FeaturedProject = React.forwardRef<HTMLDivElement, React.ComponentProps<'div'>>((restProps, ref) => (
+  <Project {...restProps} ref={ref} />
+));
+
+const FeaturedContent = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
   return <Content {...restProps}>{children}</Content>;
 };
 
-Featured.Overline = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
+const FeaturedOverline = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
   return <Overline {...restProps}>{children}</Overline>;
 };
 
-Featured.Title = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
+const FeaturedTitle = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
   return <Title {...restProps}>{children}</Title>;
 };
 
-Featured.Description = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
+const FeaturedDescription = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
   return <Description {...restProps}>{children}</Description>;
 };
 
-Featured.TechList = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
+const FeaturedTechList = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
   return <TechList {...restProps}>{children}</TechList>;
 };
 
-Featured.Links = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
+const FeaturedLinks = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
   return <Links {...restProps}>{children}</Links>;
 };
 
-Featured.Image = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
+const FeaturedImage = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
   return <Image {...restProps}>{children}</Image>;
 };
+
+type Featured = React.ForwardRefExoticComponent<FeaturedProps> & {
+  Content: typeof FeaturedContent;
+  Description: typeof FeaturedDescription;
+  Heading: typeof FeaturedHeading;
+  Image: typeof FeaturedImage;
+  Links: typeof FeaturedLinks;
+  Overline: typeof FeaturedOverline;
+  Project: typeof FeaturedProject;
+  TechList: typeof FeaturedTechList;
+  Title: typeof FeaturedTitle;
+};
+
+const Featured = React.forwardRef<HTMLDivElement, FeaturedProps>(({ children }: FeaturedProps, ref) => {
+  return <Container ref={ref}>{children}</Container>;
+}) as Featured;
+
+Featured.displayName = 'Featured';
+Featured.defaultProps = defaultProps as any;
+Featured.propTypes = propTypes;
+
+Featured.Content = FeaturedContent;
+Featured.Description = FeaturedDescription;
+Featured.Heading = FeaturedHeading;
+Featured.Image = FeaturedImage;
+Featured.Links = FeaturedLinks;
+Featured.Overline = FeaturedOverline;
+Featured.Project = FeaturedProject;
+Featured.TechList = FeaturedTechList;
+Featured.Title = FeaturedTitle;
 
 export default Featured;

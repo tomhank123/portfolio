@@ -1,22 +1,33 @@
 import { Featured } from '@/components';
 import { Icon } from '@/components/icons';
+import config from '@/config';
 import projectData from '@/fixtures/projects.json';
+import sr from '@/utils/sr';
 import * as React from 'react';
-import { FC } from 'react';
+import { FC, useEffect, useRef } from 'react';
 
 interface IProps {}
 
 const FeaturedContainer: FC<IProps> = (props: IProps) => {
   const projectsToShow = projectData.slice(0, 3);
 
+  const revealTitle = useRef(null);
+  const revealProjects = useRef([]);
+  useEffect(() => {
+    if (sr) {
+      sr.reveal((revealTitle as any).current, config.srConfig());
+      revealProjects.current.forEach((ref, i) => sr && sr.reveal(ref, config.srConfig(i * 100)));
+    }
+  }, []);
+
   return (
     <Featured id='projects'>
-      <Featured.Heading>Some Things I’ve Built</Featured.Heading>
+      <Featured.Heading ref={revealTitle}>Some Things I’ve Built</Featured.Heading>
 
       <div>
         {projectsToShow &&
           projectsToShow.map(({ title, github, html, external, technologies, cover }, i) => (
-            <Featured.Project key={i}>
+            <Featured.Project key={i} ref={(el) => ((revealProjects as any).current[i] = el)}>
               <Featured.Content>
                 <Featured.Overline>Featured Project</Featured.Overline>
                 <Featured.Title>{title}</Featured.Title>

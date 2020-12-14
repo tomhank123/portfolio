@@ -1,7 +1,9 @@
 import { Jobs } from '@/components';
+import config from '@/config';
 import jobsData from '@/fixtures/jobs.json';
+import sr from '@/utils/sr';
 import * as React from 'react';
-import { FC, useState } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
 interface IProps {}
@@ -9,8 +11,15 @@ interface IProps {}
 const JobsContainer: FC<IProps> = (props: IProps) => {
   const [activeTabId, setActiveTabId] = useState<number>(0);
 
+  const revealContainer = useRef(null);
+  useEffect(() => {
+    if (sr) {
+      sr.reveal((revealContainer as any).current, config.srConfig());
+    }
+  }, []);
+
   return (
-    <Jobs id='jobs'>
+    <Jobs id='jobs' ref={revealContainer}>
       <Jobs.Heading>Where I’ve Worked</Jobs.Heading>
       <Jobs.Inner>
         <Jobs.TabList role='tablist' aria-label='Job tabs'>
