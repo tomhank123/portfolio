@@ -29,8 +29,8 @@ const ProjectContainer: FC<IProps> = (props: IProps) => {
 
   return (
     <Project id='projects'>
-      <Project.Heading>Other Noteworthy Projects</Project.Heading>
-      <Project.ArchiveLink className='inline-link' to='/archive'>
+      <Project.Heading ref={revealTitle}>Other Noteworthy Projects</Project.Heading>
+      <Project.ArchiveLink className='inline-link' to='/archive' ref={revealArchiveLink}>
         view the archive
       </Project.ArchiveLink>
 
@@ -47,6 +47,7 @@ const ProjectContainer: FC<IProps> = (props: IProps) => {
                 >
                   <Project.Item
                     key={i}
+                    ref={el => ((revealProjects as any).current[i] = el)}
                     tabIndex={0}
                     style={{
                       transitionDelay: `${i >= GRID_LIMIT ? (i - GRID_LIMIT) * 100 : 0}ms`,
