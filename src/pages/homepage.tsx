@@ -1,16 +1,11 @@
 import {
   BiographyContainer,
-  CertificateContainer,
   ContactContainer,
-  EducationContainer,
-  ExperienceContainer,
   FeaturedContainer,
+  JobsContainer,
   JumbotronContainer,
   LayoutContainer,
   ProjectContainer,
-  SkillContainer,
-  TechnologyContainer,
-  JobsContainer
 } from '@/containers';
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
@@ -27,15 +22,6 @@ const Homepage = () => {
         <FeaturedContainer />
         <ProjectContainer />
         <ContactContainer />
-        {false && (
-          <>
-            <TechnologyContainer />
-            <SkillContainer />
-            <ExperienceContainer />
-            <EducationContainer />
-            <CertificateContainer />
-          </>
-        )}
       </main>
     </LayoutContainer>
   );
