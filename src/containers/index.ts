@@ -1,5 +1,6 @@
 export { default as EmailContainer } from './email';
 export { default as FooterContainer } from './footer';
+export { default as MenuContainer } from './menu';
 export { default as HeaderContainer } from './header';
 export { default as LoaderContainer } from './loader';
 export { default as NotFoundContainer } from './notfound';

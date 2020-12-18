@@ -7,6 +7,7 @@ import * as React from 'react';
 import { FC, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import MenuContainer from './menu';
 
 interface IProps {
   isHome: boolean;
@@ -84,6 +85,13 @@ const HeaderContainer: FC<IProps> = ({ isHome }: IProps) => {
             )}
           </TransitionGroup>
         </Header.Links>
+        <TransitionGroup component={null}>
+          {isMounted && (
+            <CSSTransition classNames={fadeClass} timeout={timeout}>
+              <MenuContainer />
+            </CSSTransition>
+          )}
+        </TransitionGroup>
       </Header.Nav>
     </Header>
   );
