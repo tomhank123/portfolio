@@ -45,7 +45,7 @@ const FooterContainer: FC<IProps> = (props: IProps) => {
       </Footer.SocialLinks>
 
       <Footer.Credit tabIndex={-1}>
-        <a href='https://github.com/bchiang7/v4'>
+        <a href='https://github.com/ductran-94-dev/portfolio' target='_blank' rel='nofollow noopener noreferrer'>
           <div>Built by Duc Tran (Designed by Brittany Chiang)</div>
 
           {githubInfo.stars && githubInfo.forks && (

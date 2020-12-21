@@ -6,7 +6,7 @@ import { FC } from 'react';
 interface IProps {}
 
 const BiographyContainer: FC<IProps> = (props: IProps) => {
-  const skills = ['JavaScript (ES6+)', 'HTML & (S)CSS', 'ReactJS', 'Vue JS', 'Node.js', 'React Native', 'Typescript'];
+  const skills = ['JavaScript (ES6+)', 'Typescript', 'ReactJS', 'Vue JS', 'HTML & (S)CSS', 'Node.js', 'React Native'];
 
   return (
     <Biography id='about'>
@@ -23,10 +23,10 @@ const BiographyContainer: FC<IProps> = (props: IProps) => {
 
             <p>
               Shortly after graduating from{' '}
-              <a href='https://sgu.edu.vn/' target='_blank' rel='noopener noreferrer'>
+              <a href='https://sgu.edu.vn/' target='_blank' rel='nofollow noopener noreferrer'>
                 Sai Gon University
               </a>
-              , I joined the engineering team at <a href='https://www.upstatement.com'>Upstatement</a> where I work on a
+              , I joined the engineering team at <a href='https://imad.com.vn/' target='_blank' rel='nofollow noopener noreferrer'>IMAD Technology</a> where I work on a
               wide variety of interesting and meaningful projects on a daily basis.
             </p>
 

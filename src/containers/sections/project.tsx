@@ -37,7 +37,10 @@ const ProjectContainer: FC<IProps> = (props: IProps) => {
       <TransitionGroup component={null}>
         <Project.Grid>
           {projectsToShow &&
-            projectsToShow.map(({ title, technologies, github, external, html }, i) => {
+            projectsToShow.map(({ node }, i) => {
+              const { frontmatter, html } = node;
+              const { external, title, tech, github } = frontmatter;
+
               return (
                 <CSSTransition
                   key={i}
@@ -77,8 +80,8 @@ const ProjectContainer: FC<IProps> = (props: IProps) => {
                       </header>
                       <footer>
                         <Project.ItemTechList>
-                          {technologies.map((tech, i) => (
-                            <li key={i}>{tech}</li>
+                          {tech.map((techItem, i) => (
+                            <li key={i}>{techItem}</li>
                           ))}
                         </Project.ItemTechList>
                       </footer>
@@ -88,7 +91,7 @@ const ProjectContainer: FC<IProps> = (props: IProps) => {
               );
             })}
         </Project.Grid>
-        <Project.MoreButton onClick={() => setShowMore(!showMore)}>
+        <Project.MoreButton onClick={() => setShowMore(!showMore)} hidden={projectData.length <= GRID_LIMIT}>
           Show {showMore ? 'Less' : 'More'}
         </Project.MoreButton>
       </TransitionGroup>

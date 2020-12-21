@@ -5,7 +5,7 @@ import {
 } from '@/containers';
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
-import projects from '@/fixtures/archive.json';
+import projects from '@/fixtures/projects.json';
 import { useEffect, useRef } from 'react';
 import sr from '@/utils/sr';
 import config from '@/config';

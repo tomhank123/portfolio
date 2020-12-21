@@ -7,7 +7,7 @@
         "company": "Devblock Vietnam",
         "range": "Jun 2018 - Present"
       },
-      "html": "<ul><li>Write modern, performant, maintainable code for a diverse array of client and internal projects</li><li>Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Gatsby, React, Craft, WordPress, Prismic, and Netlify</li><li>Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis</li></ul>"
+      "html": "<ul><li>Write modern, performant, maintainable code for a diverse array of client and internal projects</li><li>Work with a variety of different languages, frameworks, and content management systems such as JavaScript, TypeScript, React JS, Vue JS and Netlify</li><li>Communicate with multi-disciplinary teams of engineers, designers, and clients on a daily basis</li></ul>"
     }
   },
   {
@@ -18,7 +18,7 @@
         "company": "NHN VietNam",
         "range": "Aug 2017 - Jun 2018"
       },
-      "html": "<ul><li>Write modern, performant, maintainable code for a diverse array of client and internal projects</li><li>Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Gatsby, React, Craft, WordPress, Prismic, and Netlify</li><li>Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis</li></ul>"
+      "html": "<ul><li>Developed and maintained code for in-house websites primarily using JavaScript, HTML, CSS, Sass, jQuery and Require JS</li><li>Developed and shipped highly interactive web applications for Comico</li><li>Clients included Korea, Japan, Thailand, Spain, Philippines and more</li></ul>"
     }
   },
   {
@@ -27,9 +27,9 @@
         "title": "Front-end Developer",
         "url": "https://imad.com.vn/",
         "company": "IMAD Technology",
-        "range": "May 2016 - Jun 2017"
+        "range": "Mar 2016 - Jun 2017"
       },
-      "html": "<ul><li>Write modern, performant, maintainable code for a diverse array of client and internal projects</li><li>Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Gatsby, React, Craft, WordPress, Prismic, and Netlify</li><li>Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis</li></ul>"
+      "html": "<ul><li>Architected and implemented the front-end of in-house websites, which lets users log in, watch full movies, and read the news in the browser</li><li>Manually tested sites in various browsers and mobile devices to ensure cross-browser compatibility and responsiveness</li><li>Interfaced with user experience designers and other developers to ensure thoughtful and coherent user experiences</li></ul>"
     }
   }
 ]

@@ -126,7 +126,7 @@ main {
     padding: 125px 25px;
   }
 
-  &.fillHeight {
+  &.fill-height {
     padding: 0 150px;
 
     @media (max-width: 1080px) {
