@@ -2,7 +2,8 @@ import { LayoutContainer, NotFoundContainer } from '@/containers';
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
-const App = () => {
+const NotFoundPage = () => {
+
   return (
     <LayoutContainer>
       <Helmet title='Page Not Found | Duc Tran' />
@@ -11,4 +12,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default NotFoundPage;

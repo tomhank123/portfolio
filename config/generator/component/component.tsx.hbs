@@ -1,12 +1,24 @@
 import * as React from 'react';
 import { Container, Title } from './styles/{{camelCase name}}';
 
-const {{pascalCase name}} = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
-  return <Container {...restProps}>{children}</Container>;
+interface {{pascalCase name}}Props extends React.HTMLProps<HTMLElement> {}
+
+const propChilds = {
+  Title: React.forwardRef<HTMLHeadingElement, React.ComponentProps<'h1'>>((restProps, ref) => (
+    <Title {...restProps} ref={ref} />
+  ))
 };
 
-{{pascalCase name}}.Title = ({ children, ...restProps }: React.HTMLAttributes<HTMLElement>) => {
-  return <Title {...restProps}>{children}</Title>;
+type {{pascalCase name}} = React.ForwardRefExoticComponent<{{pascalCase name}}Props> & {
+  Title: typeof propChilds.Title;
 };
+
+const {{pascalCase name}} = React.forwardRef<HTMLDivElement, {{pascalCase name}}Props>(({ children }: {{pascalCase name}}Props, ref) => {
+  return <Container ref={ref}>{children}</Container>;
+}) as {{pascalCase name}};
+
+{{pascalCase name}}.displayName = '{{pascalCase name}}';
+
+{{pascalCase name}}.Title = propChilds.Title;
 
 export default {{pascalCase name}};
