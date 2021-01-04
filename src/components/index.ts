@@ -1,3 +1,4 @@
+/* PLOP_COMPONENTS_EXPORT */
 export { default as NotFound } from './notfound';
 export { default as Side } from './side';
 export { default as Biography } from './biography';
