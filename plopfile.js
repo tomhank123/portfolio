@@ -24,6 +24,12 @@ module.exports = plop => {
         path: 'src/components/{{camelCase name}}/styles/{{camelCase name}}.ts',
         templateFile: 'config/generator/component/styles/component.ts.hbs'
       },
+      {
+        type: 'append',
+        path: 'src/components/index.ts',
+        pattern: `/* PLOP_COMPONENTS_EXPORT */`,
+        template: `export { default as {{pascalCase name}} } from './{{camelCase name}}';`
+      },
     ]
   })
 
