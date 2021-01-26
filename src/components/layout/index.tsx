@@ -1,6 +1,6 @@
-import Email from '@/components/Email';
-import Header from '@/components/Header';
-import Social from '@/components/Social';
+import Email from '@/components/email';
+import Header from '@/components/header';
+import Social from '@/components/social';
 import { FooterContainer, LoaderContainer } from '@/containers';
 import * as React from 'react';
 import { FC, useEffect, useState } from 'react';

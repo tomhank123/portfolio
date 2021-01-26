@@ -11,5 +11,5 @@ export { default as Technology } from './technology';
 export { default as Project } from './project';
 export { default as Featured } from './featured';
 export { default as Jobs } from './jobs';
-export { default as Social } from './Social';
+export { default as Social } from './social';
 export { default as Loader } from './loader';
