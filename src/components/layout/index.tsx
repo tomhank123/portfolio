@@ -1,7 +1,8 @@
 import Email from '@/components/email';
 import Header from '@/components/header';
+import LoadingIndicator from '@/components/LoadingIndicator';
 import Social from '@/components/social';
-import { FooterContainer, LoaderContainer } from '@/containers';
+import { FooterContainer } from '@/containers';
 import * as React from 'react';
 import { FC, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -35,7 +36,7 @@ const LayoutContainer: FC<IProps> = ({ children }: IProps) => {
   return (
     <>
       {isLoading && isHome ? (
-        <LoaderContainer finishLoading={() => setIsLoading(false)} />
+        <LoadingIndicator finishLoading={() => setIsLoading(false)} />
       ) : (
         <Wrapper>
           <Header isHome={isHome} />

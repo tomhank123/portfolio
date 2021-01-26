@@ -1,4 +1,5 @@
-import { Loader } from '@/components';
+import Wrapper from './Wrapper';
+import Inner from './Inner';
 import { IconLoader } from '@/components/icons';
 import anime from 'animejs';
 import * as React from 'react';
@@ -8,7 +9,7 @@ interface IProps {
   finishLoading: () => void;
 }
 
-const LoaderContainer: FC<IProps> = ({ finishLoading }: IProps) => {
+const LoadingIndicator: FC<IProps> = ({ finishLoading }: IProps) => {
   const [isMounted, setIsMounted] = useState(false);
   const animate = useCallback(() => {
     const loader = anime.timeline({
@@ -55,10 +56,12 @@ const LoaderContainer: FC<IProps> = ({ finishLoading }: IProps) => {
   }, [animate]);
 
   return (
-    <Loader className='loader' isMounted={isMounted}>
-      <IconLoader />
-    </Loader>
+    <Wrapper className='loader'>
+      <Inner isMounted={isMounted}>
+        <IconLoader />
+      </Inner>
+    </Wrapper>
   );
 };
 
-export default LoaderContainer;
+export default LoadingIndicator;

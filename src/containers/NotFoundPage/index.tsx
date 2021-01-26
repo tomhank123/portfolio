@@ -1,10 +1,13 @@
-import NotFound from '@/components/notfound';
 import Layout from '@/components/layout';
 import { navDelay } from '@/utils';
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import HomeButton from './HomeButton';
+import Subtitle from './Subtitle';
+import Title from './Title';
+import Wrapper from './Wrapper';
 
 const NotFoundPage = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -17,14 +20,15 @@ const NotFoundPage = () => {
   return (
     <Layout>
       <Helmet title='Page Not Found | Duc Tran' />
+
       <TransitionGroup component={null}>
         {isMounted && (
           <CSSTransition timeout={500} classNames='fadeup'>
-            <NotFound>
-              <NotFound.Title>404</NotFound.Title>
-              <NotFound.Subtitle>Page Not Found</NotFound.Subtitle>
-              <NotFound.HomeButton to='/'>Go Home</NotFound.HomeButton>
-            </NotFound>
+            <Wrapper>
+              <Title>404</Title>
+              <Subtitle>Page Not Found</Subtitle>
+              <HomeButton to='/'>Go Home</HomeButton>
+            </Wrapper>
           </CSSTransition>
         )}
       </TransitionGroup>

@@ -1,6 +1,6 @@
 import { IconLogo } from '@/components/icons';
+import Menu from '@/components/menu';
 import config from '@/config';
-import MenuContainer from '@/containers/Menu';
 import { useScrollDirection } from '@/hooks';
 import { loaderDelay } from '@/utils';
 import * as React from 'react';
@@ -91,7 +91,7 @@ const HeaderContainer: FC<IProps> = ({ isHome }: IProps) => {
         <TransitionGroup component={null}>
           {isMounted && (
             <CSSTransition classNames={fadeClass} timeout={timeout}>
-              <MenuContainer />
+              <Menu />
             </CSSTransition>
           )}
         </TransitionGroup>

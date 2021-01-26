@@ -1,5 +1,4 @@
 export { default as FooterContainer } from './Footer';
-export { default as LoaderContainer } from './loader';
 export { default as BiographyContainer } from './sections/biography';
 export { default as ContactContainer } from './sections/contact';
 export { default as JumbotronContainer } from './sections/jumbotron';
