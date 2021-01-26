@@ -1,8 +1,6 @@
 import { Table } from '@/components';
 import { Icon } from '@/components/icons';
-import {
-  LayoutContainer
-} from '@/containers';
+import Layout from '@/components/Layout';
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import projects from '@/fixtures/projects.json';
@@ -24,7 +22,7 @@ const ArchivePage = () => {
   }, []);
 
   return (
-    <LayoutContainer>
+    <Layout>
       <Helmet title='Archive' />
 
       <main>
@@ -109,7 +107,7 @@ const ArchivePage = () => {
           </table>
         </Table>
       </main>
-    </LayoutContainer>
+    </Layout>
   );
 };
 

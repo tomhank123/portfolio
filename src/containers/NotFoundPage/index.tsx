@@ -1,5 +1,5 @@
 import NotFound from '@/components/notfound';
-import LayoutContainer from '@/containers/layout';
+import Layout from '@/components/Layout';
 import { navDelay } from '@/utils';
 import * as React from 'react';
 import { useEffect, useState } from 'react';
@@ -15,7 +15,7 @@ const NotFoundPage = () => {
   }, []);
 
   return (
-    <LayoutContainer>
+    <Layout>
       <Helmet title='Page Not Found | Duc Tran' />
       <TransitionGroup component={null}>
         {isMounted && (
@@ -28,7 +28,7 @@ const NotFoundPage = () => {
           </CSSTransition>
         )}
       </TransitionGroup>
-    </LayoutContainer>
+    </Layout>
   );
 };
 

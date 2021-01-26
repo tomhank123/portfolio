@@ -4,15 +4,15 @@ import {
   FeaturedContainer,
   JobsContainer,
   JumbotronContainer,
-  LayoutContainer,
   ProjectContainer,
 } from '@/containers';
+import Layout from '@/components/Layout';
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
 const Homepage = () => {
   return (
-    <LayoutContainer>
+    <Layout>
       <Helmet title='Duc Tran' />
 
       <main className='fill-height' style={{ counterReset: 'section' }}>
@@ -23,7 +23,7 @@ const Homepage = () => {
         <ProjectContainer />
         <ContactContainer />
       </main>
-    </LayoutContainer>
+    </Layout>
   );
 };
 
