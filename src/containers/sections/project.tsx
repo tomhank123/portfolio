@@ -1,7 +1,7 @@
 import { Project } from '@/components';
 import { Icon } from '@/components/icons';
 import config from '@/config';
-import { GRID_LIMIT } from '@/constants';
+import { GRID_LIMIT } from './constants';
 import projectData from '@/fixtures/projects.json';
 import sr from '@/utils/sr';
 import * as React from 'react';

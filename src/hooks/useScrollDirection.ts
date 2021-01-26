@@ -1,4 +1,4 @@
-import { SCROLL_DOWN, SCROLL_UP } from '@/constants';
+import { SCROLL_DOWN, SCROLL_UP } from './constants';
 import { useEffect, useState } from 'react';
 
 const useScrollDirection = ({ initialDirection, thresholdPixels, off }: any = {}) => {
