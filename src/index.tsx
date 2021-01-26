@@ -1,4 +1,4 @@
-import App from '@/main';
+import App from '@/containers/App';
 import { GlobalStyle, theme } from '@/styles';
 import fa from '@/utils/fontAwesome';
 import React from 'react';
