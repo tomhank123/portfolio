@@ -1,6 +1,6 @@
 import { Table } from '@/components';
 import { Icon } from '@/components/icons';
-import Layout from '@/components/Layout';
+import Layout from '@/components/layout';
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import projects from '@/fixtures/projects.json';

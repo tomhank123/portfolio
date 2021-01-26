@@ -6,7 +6,7 @@ import {
   JumbotronContainer,
   ProjectContainer,
 } from '@/containers';
-import Layout from '@/components/Layout';
+import Layout from '@/components/layout';
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 

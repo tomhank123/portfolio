@@ -1,5 +1,5 @@
 import NotFound from '@/components/notfound';
-import Layout from '@/components/Layout';
+import Layout from '@/components/layout';
 import { navDelay } from '@/utils';
 import * as React from 'react';
 import { useEffect, useState } from 'react';
