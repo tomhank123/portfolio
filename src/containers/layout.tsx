@@ -1,7 +1,8 @@
 import { Layout } from '@/components';
-import { EmailContainer, FooterContainer, HeaderContainer, LoaderContainer, SocialContainer } from '@/containers';
+import Email from '@/components/email';
+import { FooterContainer, HeaderContainer, LoaderContainer, SocialContainer } from '@/containers';
 import * as React from 'react';
-import { FC, useState, useEffect } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 interface IProps {
@@ -37,7 +38,7 @@ const LayoutContainer: FC<IProps> = ({ children }: IProps) => {
         <Layout>
           <HeaderContainer isHome={isHome} />
           <SocialContainer isHome={isHome} />
-          <EmailContainer isHome={isHome} />
+          <Email isHome={isHome} />
           <div id='content'>
             {children}
             <FooterContainer />

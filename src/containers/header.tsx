@@ -1,13 +1,13 @@
 import { Header } from '@/components';
 import { IconLogo } from '@/components/icons';
 import config from '@/config';
+import MenuContainer from '@/containers/Menu';
 import { useScrollDirection } from '@/hooks';
 import { loaderDelay } from '@/utils';
 import * as React from 'react';
 import { FC, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import MenuContainer from './menu';
 
 interface IProps {
   isHome: boolean;

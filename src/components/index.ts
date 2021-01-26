@@ -13,6 +13,5 @@ export { default as Project } from './project';
 export { default as Featured } from './featured';
 export { default as Jobs } from './jobs';
 export { default as Social } from './social';
-export { default as Email } from './email';
 export { default as Loader } from './loader';
 export { default as Layout } from './layout';
