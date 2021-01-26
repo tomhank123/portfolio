@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export default styled.div`
   margin: 100px -20px;
 
   @media (max-width: 768px) {

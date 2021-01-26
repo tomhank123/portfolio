@@ -1,7 +1,6 @@
 /* PLOP_COMPONENTS_EXPORT */
 export { default as Biography } from './biography';
 export { default as Contact } from './contact';
-export { default as Table } from './table';
 export { default as Footer } from './footer';
 export { default as Jumbotron } from './jumbotron';
 export { default as Project } from './project';

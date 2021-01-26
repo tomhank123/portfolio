@@ -1,12 +1,12 @@
-import { Table } from '@/components';
 import { Icon } from '@/components/icons';
 import Layout from '@/components/layout';
-import * as React from 'react';
-import { Helmet } from 'react-helmet';
-import projects from '@/fixtures/projects.json';
-import { useEffect, useRef } from 'react';
-import sr from '@/utils/sr';
 import config from '@/config';
+import projects from '@/fixtures/projects.json';
+import sr from '@/utils/sr';
+import * as React from 'react';
+import { useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet';
+import Table from './Table';
 
 const ArchivePage = () => {
   const revealTitle = useRef<any>(null);
@@ -16,8 +16,8 @@ const ArchivePage = () => {
   useEffect(() => {
     if (sr) {
       sr.reveal(revealTitle.current as any, config.srConfig());
-      sr.reveal(revealTable.current  as any, config.srConfig(200, 0));
-      revealProjects.current.forEach((ref, i) => sr && sr.reveal(ref  as any, config.srConfig(i * 10)));
+      sr.reveal(revealTable.current as any, config.srConfig(200, 0));
+      revealProjects.current.forEach((ref, i) => sr && sr.reveal(ref as any, config.srConfig(i * 10)));
     }
   }, []);
 
@@ -45,25 +45,14 @@ const ArchivePage = () => {
             <tbody>
               {projects.length > 0 &&
                 projects.map(({ node }, i) => {
-                  const {
-                    date,
-                    github,
-                    external,
-                    ios,
-                    android,
-                    title,
-                    tech,
-                    company,
-                  } = node.frontmatter;
+                  const { date, github, external, ios, android, title, tech, company } = node.frontmatter;
                   return (
-                    <tr key={i} ref={el => (revealProjects.current[i] = el)}>
+                    <tr key={i} ref={(el) => (revealProjects.current[i] = el)}>
                       <td className='overline year'>{`${new Date(date).getFullYear()}`}</td>
 
                       <td className='title'>{title}</td>
 
-                      <td className='company hide-on-mobile'>
-                        {company ? <span>{company}</span> : <span>—</span>}
-                      </td>
+                      <td className='company hide-on-mobile'>{company ? <span>{company}</span> : <span>—</span>}</td>
 
                       <td className='tech hide-on-mobile'>
                         {tech.length > 0 &&
