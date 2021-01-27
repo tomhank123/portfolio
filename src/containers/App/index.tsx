@@ -6,6 +6,8 @@ import NotFoundPage from '@/containers/NotFoundPage';
 import ArchivePage from '@/containers/ArchivePage';
 import Homepage from '@/containers/HomePage';
 
+import GlobalStyle from '@/styles/globalStyle';
+
 const App = () => {
   return (
     <Router>
@@ -14,6 +16,7 @@ const App = () => {
         <Route exact path={ROUTES.ARCHIVE} component={ArchivePage} />
         <Route path='' component={NotFoundPage} />
       </Switch>
+      <GlobalStyle />
     </Router>
   );
 };

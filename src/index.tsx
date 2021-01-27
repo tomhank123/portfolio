@@ -1,5 +1,5 @@
 import App from '@/containers/App';
-import { GlobalStyle, theme } from '@/styles';
+import theme from '@/styles/theme';
 import fa from '@/utils/fontAwesome';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -10,7 +10,6 @@ fa.init();
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
-    <GlobalStyle />
     <App />
   </ThemeProvider>,
   document.getElementById('root')

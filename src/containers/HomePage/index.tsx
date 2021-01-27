@@ -1,11 +1,9 @@
-import {
-  BiographyContainer,
-  ContactContainer,
-  FeaturedContainer,
-  JobsContainer,
-  JumbotronContainer,
-  ProjectContainer,
-} from '@/containers';
+import BiographyContainer from '@/containers/sections/biography';
+import ContactContainer from '@/containers/sections/contact';
+import FeaturedContainer from '@/containers/sections/featured';
+import JobsContainer from '@/containers/sections/jobs';
+import JumbotronContainer from '@/containers/sections/jumbotron';
+import ProjectContainer from '@/containers/sections/project';
 import Layout from '@/components/layout';
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
