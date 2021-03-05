@@ -14,6 +14,7 @@ import { Switch, Route } from 'react-router-dom';
 import fa from 'utils/fontAwesome';
 
 import HomePage from 'containers/HomePage/Loadable';
+import ArchivePage from 'containers/ArchivePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Footer from 'containers/Footer';
 import Header from 'components/Header';
@@ -39,6 +40,7 @@ export default function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
+        <Route exact path="/archive" component={ArchivePage} />
         <Route path="" component={NotFoundPage} />
       </Switch>
       <Social />
