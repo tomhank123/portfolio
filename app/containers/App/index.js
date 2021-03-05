@@ -17,6 +17,7 @@ import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Footer from 'containers/Footer';
 import Header from 'components/Header';
+import Email from 'components/Email';
 
 import GlobalStyle from '../../global-styles';
 
@@ -39,6 +40,7 @@ export default function App() {
         <Route exact path="/" component={HomePage} />
         <Route path="" component={NotFoundPage} />
       </Switch>
+      <Email />
       <Footer />
       <GlobalStyle />
     </AppWrapper>
