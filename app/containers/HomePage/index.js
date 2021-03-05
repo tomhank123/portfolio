@@ -9,8 +9,8 @@ import { Helmet } from 'react-helmet';
 
 import Layout from 'containers/Layout';
 import Contact from 'components/Contact';
-import Project from 'components/Project';
-import Featured from 'components/Featured';
+// import Project from 'components/Project';
+// import Featured from 'components/Featured';
 import Biography from 'components/Biography';
 import Hero from 'components/Hero';
 import Jobs from 'components/Jobs';
@@ -29,8 +29,6 @@ export function HomePage() {
         <Hero />
         <Biography />
         <Jobs />
-        <Featured />
-        <Project />
         <Contact />
       </Wrapper>
     </Layout>
