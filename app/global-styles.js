@@ -72,8 +72,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
     margin: 0;
     width: 100%;
     min-height: 100%;

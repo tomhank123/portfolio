@@ -8,8 +8,8 @@ export default styled.div`
   &:focus {
     outline: 0;
 
-    /* ${ItemInner} {
+    .ItemInner {
       transform: translateY(-5px);
-    } */
+    }
   }
 `;

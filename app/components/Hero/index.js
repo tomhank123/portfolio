@@ -44,7 +44,7 @@ function Hero() {
       <TransitionGroup component={null}>
         {isMounted &&
           items.map((item, i) => (
-            <CSSTransition key={i} classNames="fadeup" timeout={loaderDelay}>
+            <CSSTransition key={item} classNames="fadeup" timeout={loaderDelay}>
               <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
             </CSSTransition>
           ))}
