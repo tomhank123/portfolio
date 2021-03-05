@@ -7,6 +7,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
+import Project from 'components/Project';
 import Featured from 'components/Featured';
 import Biography from 'components/Biography';
 
@@ -26,6 +27,7 @@ export function HomePage() {
         <Biography />
         <Jobs />
         <Featured />
+        <Project />
       </Wrapper>
     </article>
   );
