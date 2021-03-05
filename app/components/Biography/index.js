@@ -1,11 +1,14 @@
+/* eslint-disable react/no-unescaped-entities */
 /**
  *
  * Biography
  *
  */
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import avatarJPG from 'images/avatar.jpg';
+import config from 'utils/config';
+import sr from 'utils/sr';
 
 import Heading from './Heading';
 import Inner from './Inner';
@@ -14,6 +17,14 @@ import Text from './Text';
 import Wrapper from './Wrapper';
 
 function Biography() {
+  const revealContainer = useRef(null);
+
+  useEffect(() => {
+    if (sr) {
+      sr.reveal(revealContainer.current, config.srConfig());
+    }
+  }, []);
+
   const skills = [
     'JavaScript (ES6+)',
     'Typescript',
@@ -23,8 +34,9 @@ function Biography() {
     'Node.js',
     'React Native',
   ];
+
   return (
-    <Wrapper id="about">
+    <Wrapper ref={revealContainer} id="about">
       <Heading>About Me</Heading>
       <Inner>
         <Text>
@@ -63,7 +75,7 @@ function Biography() {
           </div>
 
           <ul className="skills-list">
-            {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
+            {skills && skills.map(skill => <li key={skill}>{skill}</li>)}
           </ul>
         </Text>
         <Pic>
