@@ -14,19 +14,12 @@ import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
-import { useInjectReducer } from 'utils/injectReducer';
-import { useInjectSaga } from 'utils/injectSaga';
 
 import { makeSelectLocation } from 'containers/App/selectors';
 
-import reducer from './reducer';
-import saga from './saga';
 import Wrapper from './Wrapper';
 
 export function Layout({ children, location }) {
-  useInjectReducer({ key: 'layout', reducer });
-  useInjectSaga({ key: 'layout', saga });
-
   const isHome = location.pathname === '/';
   const [isLoading, setIsLoading] = useState(isHome);
 
@@ -74,10 +67,8 @@ const mapStateToProps = createStructuredSelector({
   location: makeSelectLocation(),
 });
 
-function mapDispatchToProps(dispatch) {
-  return {
-    dispatch,
-  };
+function mapDispatchToProps() {
+  return {};
 }
 
 const withConnect = connect(
