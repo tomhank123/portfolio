@@ -37,7 +37,7 @@ function Footer() {
         <ul>
           {config.socialMedia &&
             config.socialMedia.map(({ name, url }) => (
-              <li key={url}>
+              <li key={`${url}`}>
                 <a href={url} aria-label={name}>
                   <Icon name={name} />
                 </a>

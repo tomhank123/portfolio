@@ -67,12 +67,12 @@ function Header({ isHome }) {
                 config.navLinks &&
                 config.navLinks.map(({ url, name }, i) => (
                   <CSSTransition
-                    key={url}
+                    key={`${url}`}
                     classNames={fadeDownClass}
                     timeout={timeout}
                   >
                     <li
-                      key={url}
+                      key={`${url}`}
                       style={{ transitionDelay: `${isHome ? i * 100 : 0}ms` }}
                     >
                       <Link to={url}>{name}</Link>

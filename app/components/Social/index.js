@@ -22,7 +22,7 @@ function Social({ isHome }) {
         <List>
           {config.socialMedia &&
             config.socialMedia.map(({ url, name }) => (
-              <ListItem key={url}>
+              <ListItem key={`${url}`}>
                 <Anchor href={url} target="_blank" aria-label={name}>
                   <Icon name={name} />
                 </Anchor>

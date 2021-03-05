@@ -60,12 +60,12 @@ function Jobs() {
 
             return (
               <CSSTransition
-                key={url}
+                key={`${url}`}
                 in={activeTabId === i}
                 timeout={250}
                 classNames="fade"
               >
-                <TabContent hidden={activeTabId !== i} key={url}>
+                <TabContent hidden={activeTabId !== i} key={`${url}`}>
                   <h3>
                     <span>{title}</span>
                     <span className="company">
