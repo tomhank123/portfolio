@@ -7,8 +7,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import Hero from 'components/Hero';
 import Biography from 'components/Biography';
+import Hero from 'components/Hero';
+import Jobs from 'components/Jobs';
 import Wrapper from './Wrapper';
 
 export function HomePage() {
@@ -21,6 +22,7 @@ export function HomePage() {
       <Wrapper className="fill-height">
         <Hero />
         <Biography />
+        <Jobs />
       </Wrapper>
     </article>
   );
