@@ -7,7 +7,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
+import Featured from 'components/Featured';
 import Biography from 'components/Biography';
+
 import Hero from 'components/Hero';
 import Jobs from 'components/Jobs';
 import Wrapper from './Wrapper';
@@ -23,6 +25,7 @@ export function HomePage() {
         <Hero />
         <Biography />
         <Jobs />
+        <Featured />
       </Wrapper>
     </article>
   );
