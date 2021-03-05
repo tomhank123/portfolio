@@ -3,6 +3,7 @@ import Proptypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { useScrollDirection } from 'hooks';
+import config from 'utils/config';
 
 import { IconLogo } from 'components/Icons';
 import ResumeButton from './ResumeButton';
@@ -10,7 +11,6 @@ import Wrapper from './Wrapper';
 import Links from './Links';
 import Nav from './Nav';
 
-import config from './config';
 import { loaderDelay } from './constants';
 
 function Header({ isHome }) {

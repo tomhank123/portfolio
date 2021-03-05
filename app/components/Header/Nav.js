@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export default styled.div`
+export default styled.nav`
   ${({ theme }) => theme.mixins.flexBetween};
   position: relative;
   width: 100%;

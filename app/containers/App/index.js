@@ -15,8 +15,8 @@ import fa from 'utils/fontAwesome';
 
 import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
+import Footer from 'containers/Footer';
 import Header from 'components/Header';
-import Footer from 'components/Footer';
 
 import GlobalStyle from '../../global-styles';
 
