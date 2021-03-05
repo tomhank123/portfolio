@@ -16,10 +16,6 @@ import fa from 'utils/fontAwesome';
 import HomePage from 'containers/HomePage/Loadable';
 import ArchivePage from 'containers/ArchivePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
-import Footer from 'containers/Footer';
-import Header from 'components/Header';
-import Social from 'components/Social';
-import Email from 'components/Email';
 
 import GlobalStyle from '../../global-styles';
 
@@ -37,15 +33,11 @@ export default function App() {
       <Helmet titleTemplate="%s - Duc Tran" defaultTitle="Duc Tran">
         <meta name="description" content="A portfolio application" />
       </Helmet>
-      <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/archive" component={ArchivePage} />
         <Route path="" component={NotFoundPage} />
       </Switch>
-      <Social />
-      <Email />
-      <Footer />
       <GlobalStyle />
     </AppWrapper>
   );

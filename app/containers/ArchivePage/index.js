@@ -4,13 +4,14 @@
  *
  */
 
+import { Icon } from 'components/Icons';
+import Table from 'components/Table';
+import Layout from 'containers/Layout';
+import projects from 'fixtures/projects.json';
 import React, { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet';
-import { Icon } from 'components/Icons';
 import config from 'utils/config';
 import sr from 'utils/sr';
-import projects from 'fixtures/projects.json';
-import Table from 'components/Table';
 
 export function ArchivePage() {
   const revealTitle = useRef(null);
@@ -28,7 +29,7 @@ export function ArchivePage() {
   }, []);
 
   return (
-    <div>
+    <Layout>
       <Helmet>
         <title>Archive</title>
         <meta name="description" content="Description of ArchivePage" />
@@ -127,7 +128,7 @@ export function ArchivePage() {
           </table>
         </Table>
       </main>
-    </div>
+    </Layout>
   );
 }
 
