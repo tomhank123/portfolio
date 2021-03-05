@@ -120,7 +120,7 @@ module.exports = require('./webpack.base.babel')({
       short_name: 'DucTran',
       description: 'My portfolio project!',
       background_color: '#fafafa',
-      theme_color: '#b1624d',
+      theme_color: '#0a192f',
       inject: true,
       ios: true,
       icons: [
