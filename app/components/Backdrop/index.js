@@ -5,7 +5,6 @@
  */
 
 import anime from 'animejs';
-import { IconLoader } from 'components/Icons';
 import PropTypes from 'prop-types';
 import React, { useCallback, useEffect, useState } from 'react';
 import Inner from './Inner';
@@ -59,9 +58,7 @@ function Backdrop({ finishLoading }) {
 
   return (
     <Wrapper className="loader">
-      <Inner isMounted={isMounted}>
-        <IconLoader />
-      </Inner>
+      <Inner isMounted={isMounted}>IconLoader</Inner>
     </Wrapper>
   );
 }

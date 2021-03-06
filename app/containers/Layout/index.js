@@ -4,7 +4,7 @@
  *
  */
 
-// import Backdrop from 'components/Backdrop';
+import Backdrop from 'components/Backdrop';
 import Email from 'components/Email';
 import Header from 'components/Header';
 import Social from 'components/Social';
@@ -21,7 +21,7 @@ import Wrapper from './Wrapper';
 
 export function Layout({ children, location }) {
   const isHome = location.pathname === '/';
-  const [isLoading] = useState(isHome);
+  const [isLoading, setIsLoading] = useState(isHome);
 
   useEffect(() => {
     if (isLoading) {
@@ -39,21 +39,21 @@ export function Layout({ children, location }) {
     }
   }, [isLoading, location.hash]);
 
-  // {isLoading && isHome ? (
-  //   <Backdrop finishLoading={() => setIsLoading(false)} />
-  // ) : (
-  //   )}
   return (
     <React.Fragment>
-      <Wrapper>
-        <Header isHome={isHome} />
-        <Social isHome={isHome} />
-        <Email isHome={isHome} />
-        <div id="content">
-          {children}
-          <Footer />
-        </div>
-      </Wrapper>
+      {isLoading && isHome ? (
+        <Backdrop finishLoading={() => setIsLoading(false)} />
+      ) : (
+        <Wrapper>
+          <Header isHome={isHome} />
+          <Social isHome={isHome} />
+          <Email isHome={isHome} />
+          <div id="content">
+            {children}
+            <Footer />
+          </div>
+        </Wrapper>
+      )}
     </React.Fragment>
   );
 }

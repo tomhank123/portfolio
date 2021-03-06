@@ -9,7 +9,6 @@ import React, { useEffect, useRef } from 'react';
 import config from 'utils/config';
 import sr from 'utils/sr';
 
-import { Icon } from 'components/Icons';
 import Content from './Content';
 import Description from './Description';
 import Heading from './Heading';
@@ -61,12 +60,12 @@ function Featured() {
                   <Links>
                     {github && (
                       <a href={github} aria-label="GitHub Link">
-                        <Icon name="GitHub" />
+                        GitHub
                       </a>
                     )}
                     {external && (
                       <a href={external} aria-label="External Link">
-                        <Icon name="External" />
+                        External
                       </a>
                     )}
                   </Links>

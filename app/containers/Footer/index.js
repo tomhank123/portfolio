@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import config from 'utils/config';
-import { Icon } from 'components/Icons';
 
 import SocialLinks from './SocialLinks';
 import Wrapper from './Wrapper';
@@ -39,7 +38,7 @@ function Footer() {
             config.socialMedia.map(({ name, url }) => (
               <li key={`${url}`}>
                 <a href={url} aria-label={name}>
-                  <Icon name={name} />
+                  {name}
                 </a>
               </li>
             ))}
@@ -57,11 +56,11 @@ function Footer() {
           {githubInfo.stars && githubInfo.forks && (
             <div className="github-stats">
               <span>
-                <Icon name="Star" />
+                Star
                 <span>{githubInfo.stars.toLocaleString()}</span>
               </span>
               <span>
-                <Icon name="Fork" />
+                Fork
                 <span>{githubInfo.forks.toLocaleString()}</span>
               </span>
             </div>

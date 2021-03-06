@@ -4,7 +4,6 @@
  *
  */
 
-import { Icon } from 'components/Icons';
 import Side from 'components/Side';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -24,7 +23,7 @@ function Social({ isHome }) {
             config.socialMedia.map(({ url, name }) => (
               <ListItem key={`${url}`}>
                 <Anchor href={url} target="_blank" aria-label={name}>
-                  <Icon name={name} />
+                  {name}
                 </Anchor>
               </ListItem>
             ))}

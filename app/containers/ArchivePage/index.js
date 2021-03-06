@@ -4,7 +4,6 @@
  *
  */
 
-import { Icon } from 'components/Icons';
 import Table from 'components/Table';
 import Layout from 'containers/Layout';
 import projects from 'fixtures/projects.json';
@@ -98,17 +97,17 @@ export function ArchivePage() {
                         <div>
                           {external && (
                             <a href={external} aria-label="External Link">
-                              <Icon name="External" />
+                              External
                             </a>
                           )}
                           {github && (
                             <a href={github} aria-label="GitHub Link">
-                              <Icon name="GitHub" />
+                              GitHub
                             </a>
                           )}
                           {ios && (
                             <a href={ios} aria-label="Apple App Store Link">
-                              <Icon name="AppStore" />
+                              AppStore
                             </a>
                           )}
                           {android && (
@@ -116,7 +115,7 @@ export function ArchivePage() {
                               href={android}
                               aria-label="Google Play Store Link"
                             >
-                              <Icon name="PlayStore" />
+                              PlayStore
                             </a>
                           )}
                         </div>

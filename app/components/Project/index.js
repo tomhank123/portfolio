@@ -6,7 +6,6 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import { Icon } from 'components/Icons';
 import config from 'utils/config';
 import sr from 'utils/sr';
 import projectData from 'fixtures/projects.json';
@@ -84,18 +83,16 @@ function Project() {
                     <ItemInner>
                       <header>
                         <ItemTop>
-                          <div className="folder">
-                            <Icon name="folder" />
-                          </div>
+                          <div className="folder">folder</div>
                           <ItemLinks>
                             {github && (
                               <a href={github} aria-label="GitHub Link">
-                                <Icon name="GitHub" />
+                                GitHub
                               </a>
                             )}
                             {external && (
                               <a href={external} aria-label="External Link">
-                                <Icon name="External" />
+                                External
                               </a>
                             )}
                           </ItemLinks>

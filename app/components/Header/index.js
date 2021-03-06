@@ -5,7 +5,6 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { useScrollDirection } from 'hooks';
 import config from 'utils/config';
 
-import { IconLogo } from 'components/Icons';
 import ResumeButton from './ResumeButton';
 import Wrapper from './Wrapper';
 import Links from './Links';
@@ -48,11 +47,11 @@ function Header({ isHome }) {
               <div className="logo" tabIndex={-1}>
                 {isHome ? (
                   <a href="/" aria-label="home">
-                    <IconLogo />
+                    IconLogo
                   </a>
                 ) : (
                   <Link to="/" aria-label="home">
-                    <IconLogo />
+                    IconLogo
                   </Link>
                 )}
               </div>
