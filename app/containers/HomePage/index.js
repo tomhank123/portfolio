@@ -10,15 +10,17 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
 
+import Layout from 'containers/Layout';
+
 export function HomePage() {
   return (
-    <article>
+    <Layout>
       <Helmet>
         <title>Home Page</title>
         <meta name="description" content="A portfolio application homepage" />
       </Helmet>
       <div>Homepage</div>
-    </article>
+    </Layout>
   );
 }
 
