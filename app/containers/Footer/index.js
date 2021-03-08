@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import config from 'utils/config';
 
 import SocialLinks from './SocialLinks';
@@ -35,10 +36,10 @@ function Footer() {
       <SocialLinks>
         <ul>
           {config.socialMedia &&
-            config.socialMedia.map(({ name, url }) => (
+            config.socialMedia.map(({ name, url, prefix }) => (
               <li key={`${url}`}>
                 <a href={url} aria-label={name}>
-                  {name}
+                  <FontAwesomeIcon icon={[prefix, name]} />
                 </a>
               </li>
             ))}
@@ -56,11 +57,11 @@ function Footer() {
           {githubInfo.stars && githubInfo.forks && (
             <div className="github-stats">
               <span>
-                Star
+                <FontAwesomeIcon icon={['fas', 'star']} />
                 <span>{githubInfo.stars.toLocaleString()}</span>
               </span>
               <span>
-                Fork
+                <FontAwesomeIcon icon={['fas', 'code-branch']} />
                 <span>{githubInfo.forks.toLocaleString()}</span>
               </span>
             </div>

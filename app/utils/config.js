@@ -3,23 +3,28 @@ export default {
 
   socialMedia: [
     {
-      name: 'GitHub',
+      name: 'github',
+      prefix: 'fab',
       url: 'https://github.com/ductran-94-dev',
     },
     {
-      name: 'Linkedin',
+      name: 'linkedin-in',
+      prefix: 'fab',
       url: 'https://www.linkedin.com/in/tran-minh-duc-554987109/',
     },
     {
-      name: 'Codepen',
+      name: 'codepen',
+      prefix: 'fab',
       url: 'https://codepen.io/trn-minh-c',
     },
     {
-      name: 'Instagram',
+      name: 'instagram',
+      prefix: 'fab',
       url: 'https://www.instagram.com/minhduc.tran.sgu/',
     },
     {
-      name: 'Twitter',
+      name: 'twitter',
+      prefix: 'fab',
       url: 'https://www.facebook.com/minhduc.tran.sgu',
     },
   ],

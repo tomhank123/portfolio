@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Proptypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useScrollDirection } from 'hooks';
 import config from 'utils/config';
 
@@ -47,11 +48,11 @@ function Header({ isHome }) {
               <div className="logo" tabIndex={-1}>
                 {isHome ? (
                   <a href="/" aria-label="home">
-                    IconLogo
+                    <FontAwesomeIcon icon={['fab', 'dochub']} size="2x" />
                   </a>
                 ) : (
                   <Link to="/" aria-label="home">
-                    IconLogo
+                    <FontAwesomeIcon icon={['fab', 'dochub']} size="2x" />
                   </Link>
                 )}
               </div>

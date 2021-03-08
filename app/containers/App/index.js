@@ -15,6 +15,8 @@ import HomePage from 'containers/HomePage/Loadable';
 import ArchivePage from 'containers/ArchivePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
+import fa from 'utils/fontAwesome';
+
 import GlobalStyle from '../../global-styles';
 
 const AppWrapper = styled.div`
@@ -22,6 +24,8 @@ const AppWrapper = styled.div`
   flex-direction: column;
   min-height: 100vh;
 `;
+
+fa.init();
 
 export default function App() {
   return (

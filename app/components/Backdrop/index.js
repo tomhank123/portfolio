@@ -7,6 +7,7 @@
 import anime from 'animejs';
 import PropTypes from 'prop-types';
 import React, { useCallback, useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Inner from './Inner';
 import Wrapper from './Wrapper';
 
@@ -58,7 +59,9 @@ function Backdrop({ finishLoading }) {
 
   return (
     <Wrapper className="loader">
-      <Inner isMounted={isMounted}>IconLoader</Inner>
+      <Inner isMounted={isMounted}>
+        <FontAwesomeIcon icon={['fab', 'dochub']} size="4x" />
+      </Inner>
     </Wrapper>
   );
 }
