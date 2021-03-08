@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useScrollDirection } from 'hooks';
 import config from 'utils/config';
 
+import Menu from 'components/Menu';
+
 import ResumeButton from './ResumeButton';
 import Wrapper from './Wrapper';
 import Links from './Links';
@@ -98,6 +100,13 @@ function Header({ isHome }) {
             )}
           </TransitionGroup>
         </Links>
+        <TransitionGroup component={null}>
+          {isMounted && (
+            <CSSTransition classNames={fadeClass} timeout={timeout}>
+              <Menu />
+            </CSSTransition>
+          )}
+        </TransitionGroup>
       </Nav>
     </Wrapper>
   );
