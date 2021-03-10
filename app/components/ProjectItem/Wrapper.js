@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Inner from './Inner';
 
 export default styled.div`
   cursor: default;
@@ -8,7 +9,7 @@ export default styled.div`
   &:focus {
     outline: 0;
 
-    .ItemInner {
+    ${Inner} {
       transform: translateY(-5px);
     }
   }

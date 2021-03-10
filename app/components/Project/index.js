@@ -57,6 +57,8 @@ function Project() {
               <ProjectItem
                 key={title}
                 node={node}
+                // eslint-disable-next-line no-return-assign
+                ref={el => (revealProjects.current[i] = el)}
                 style={{
                   transitionDelay: `${
                     i >= GRID_LIMIT ? (i - GRID_LIMIT) * 100 : 0

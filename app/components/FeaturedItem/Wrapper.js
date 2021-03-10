@@ -1,4 +1,8 @@
 import styled from 'styled-components';
+import Content from './Content';
+import TechList from './TechList';
+import Links from './Links';
+import Image from './Image';
 
 export default styled.div`
   display: grid;
@@ -19,7 +23,7 @@ export default styled.div`
   }
 
   &:nth-of-type(odd) {
-    .Content-* {
+    ${Content} {
       grid-column: 7 / -1;
       text-align: right;
 
@@ -35,7 +39,7 @@ export default styled.div`
       }
     }
 
-    .TechList-* {
+    ${TechList} {
       justify-content: flex-end;
 
       li {
@@ -47,13 +51,13 @@ export default styled.div`
       }
     }
 
-    .Links- {
+    ${Links} {
       justify-content: flex-end;
       margin-left: 0;
       margin-right: -10px;
     }
 
-    .Image- {
+    ${Image} {
       grid-column: 1 / 8;
 
       @media (max-width: 768px) {
