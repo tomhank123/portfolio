@@ -9,7 +9,7 @@ import { Helmet } from 'react-helmet';
 
 import Layout from 'containers/Layout';
 import Contact from 'components/Contact';
-// import Project from 'components/Project';
+import Project from 'components/Project';
 import Featured from 'components/Featured';
 import Biography from 'components/Biography';
 import Hero from 'components/Hero';
@@ -30,6 +30,7 @@ export function HomePage() {
         <Biography />
         <Jobs />
         <Featured />
+        <Project />
         <Contact />
       </Wrapper>
     </Layout>

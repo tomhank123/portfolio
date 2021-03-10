@@ -4,24 +4,16 @@
  *
  */
 
-import React, { useEffect, useState, useRef } from 'react';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import ProjectItem from 'components/ProjectItem';
+import projectData from 'fixtures/projects.json';
+import React, { useEffect, useRef, useState } from 'react';
 import config from 'utils/config';
 import sr from 'utils/sr';
-import projectData from 'fixtures/projects.json';
-
 import ArchiveLink from './ArchiveLink';
-import Wrapper from './Wrapper';
 import Grid from './Grid';
 import Heading from './Heading';
-import Item from './Item';
-import ItemDescription from './ItemDescription';
-import ItemInner from './ItemInner';
-import ItemLinks from './ItemLinks';
-import ItemTechList from './ItemTechList';
-import ItemTitle from './ItemTitle';
-import ItemTop from './ItemTop';
 import MoreButton from './MoreButton';
+import Wrapper from './Wrapper';
 
 const GRID_LIMIT = 6;
 
@@ -55,73 +47,31 @@ function Project() {
         view the archive
       </ArchiveLink>
 
-      <TransitionGroup component={null}>
-        <Grid>
-          {projectsToShow &&
-            projectsToShow.map(({ node }, i) => {
-              const { frontmatter, html } = node;
-              const { external, title, tech, github } = frontmatter;
+      <Grid>
+        {projectsToShow &&
+          projectsToShow.map(({ node }, i) => {
+            const { frontmatter } = node;
+            const { title } = frontmatter;
 
-              return (
-                <CSSTransition
-                  key={title}
-                  classNames="fadeup"
-                  timeout={i >= GRID_LIMIT ? (i - GRID_LIMIT) * 300 : 300}
-                  exit={false}
-                >
-                  <Item
-                    key={title}
-                    // eslint-disable-next-line no-return-assign
-                    ref={el => (revealProjects.current[i] = el)}
-                    tabIndex={0}
-                    style={{
-                      transitionDelay: `${
-                        i >= GRID_LIMIT ? (i - GRID_LIMIT) * 100 : 0
-                      }ms`,
-                    }}
-                  >
-                    <ItemInner>
-                      <header>
-                        <ItemTop>
-                          <div className="folder">folder</div>
-                          <ItemLinks>
-                            {github && (
-                              <a href={github} aria-label="GitHub Link">
-                                GitHub
-                              </a>
-                            )}
-                            {external && (
-                              <a href={external} aria-label="External Link">
-                                External
-                              </a>
-                            )}
-                          </ItemLinks>
-                        </ItemTop>
-                        <ItemTitle>{title}</ItemTitle>
-                        <ItemDescription
-                          dangerouslySetInnerHTML={{ __html: html }}
-                        />
-                      </header>
-                      <footer>
-                        <ItemTechList>
-                          {tech.map(techItem => (
-                            <li key={techItem}>{techItem}</li>
-                          ))}
-                        </ItemTechList>
-                      </footer>
-                    </ItemInner>
-                  </Item>
-                </CSSTransition>
-              );
-            })}
-        </Grid>
-        <MoreButton
-          onClick={() => setShowMore(!showMore)}
-          hidden={projectData.length <= GRID_LIMIT}
-        >
-          Show {showMore ? 'Less' : 'More'}
-        </MoreButton>
-      </TransitionGroup>
+            return (
+              <ProjectItem
+                key={title}
+                node={node}
+                style={{
+                  transitionDelay: `${
+                    i >= GRID_LIMIT ? (i - GRID_LIMIT) * 100 : 0
+                  }ms`,
+                }}
+              />
+            );
+          })}
+      </Grid>
+      <MoreButton
+        onClick={() => setShowMore(!showMore)}
+        hidden={projectData.length <= GRID_LIMIT}
+      >
+        Show {showMore ? 'Less' : 'More'}
+      </MoreButton>
     </Wrapper>
   );
 }
