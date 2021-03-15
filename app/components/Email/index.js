@@ -14,10 +14,12 @@ import EmailLink from './EmailLink';
 import Wrapper from './Wrapper';
 
 function Email({ isHome }) {
+  const { email } = config;
+
   return (
     <Side isHome={isHome} orientation="right">
       <Wrapper>
-        <EmailLink href={`mailto:${config.email}`}>{config.email}</EmailLink>
+        <EmailLink href={`mailto:${email}`}>{email}</EmailLink>
       </Wrapper>
     </Side>
   );
