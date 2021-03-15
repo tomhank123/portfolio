@@ -16,14 +16,21 @@ import ListItem from './ListItem';
 import Wrapper from './Wrapper';
 
 function Social({ isHome }) {
+  const { socialMedia } = config;
+
   return (
     <Side isHome={isHome} orientation="left">
       <Wrapper>
         <List>
-          {config.socialMedia &&
-            config.socialMedia.map(({ url, name, prefix }) => (
+          {socialMedia &&
+            socialMedia.map(({ url, name, prefix }) => (
               <ListItem key={`${url}`}>
-                <Anchor href={url} target="_blank" aria-label={name}>
+                <Anchor
+                  href={url}
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  aria-label={name}
+                >
                   <FontAwesomeIcon icon={[prefix, name]} />
                 </Anchor>
               </ListItem>

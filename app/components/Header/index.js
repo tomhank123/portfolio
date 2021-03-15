@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useScrollDirection } from 'hooks';
+import { loaderDelay } from 'utils/constants';
 import config from 'utils/config';
 
 import Menu from 'components/Menu';
@@ -13,9 +14,8 @@ import Wrapper from './Wrapper';
 import Links from './Links';
 import Nav from './Nav';
 
-import { loaderDelay } from './constants';
-
 function Header({ isHome }) {
+  const { navLinks } = config;
   const [isMounted, setIsMounted] = useState(!isHome);
   const scrollDirection = useScrollDirection('down');
   const [scrolledToTop, setScrolledToTop] = useState(true);
@@ -47,7 +47,7 @@ function Header({ isHome }) {
         <TransitionGroup component={null}>
           {isMounted && (
             <CSSTransition classNames={fadeClass} timeout={timeout}>
-              <div className="logo" tabIndex={-1}>
+              <div className="logo" tabIndex="-1">
                 {isHome ? (
                   <a href="/" aria-label="home">
                     <FontAwesomeIcon icon={['fab', 'dochub']} size="2x" />
@@ -66,8 +66,8 @@ function Header({ isHome }) {
           <ol>
             <TransitionGroup component={null}>
               {isMounted &&
-                config.navLinks &&
-                config.navLinks.map(({ url, name }, i) => (
+                navLinks &&
+                navLinks.map(({ url, name }, i) => (
                   <CSSTransition
                     key={`${url}`}
                     classNames={fadeDownClass}
@@ -89,9 +89,7 @@ function Header({ isHome }) {
               <CSSTransition classNames={fadeDownClass} timeout={timeout}>
                 <div
                   style={{
-                    transitionDelay: `${
-                      isHome ? config.navLinks.length * 100 : 0
-                    }ms`,
+                    transitionDelay: `${isHome ? navLinks.length * 100 : 0}ms`,
                   }}
                 >
                   <ResumeButton href="/resume.pdf">Resume</ResumeButton>

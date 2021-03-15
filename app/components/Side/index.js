@@ -18,6 +18,7 @@ function Side({ isHome, orientation, children, ...props }) {
     if (!isHome) {
       return;
     }
+
     const timeout = setTimeout(() => setIsMounted(true), loaderDelay);
 
     // eslint-disable-next-line consistent-return
@@ -42,7 +43,7 @@ function Side({ isHome, orientation, children, ...props }) {
 Side.propTypes = {
   isHome: PropTypes.bool,
   orientation: PropTypes.string,
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
 };
 
 export default Side;
