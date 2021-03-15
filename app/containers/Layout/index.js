@@ -4,7 +4,7 @@
  *
  */
 
-import Backdrop from 'components/Backdrop';
+import Loader from 'components/Loader';
 import Email from 'components/Email';
 import Header from 'components/Header';
 import Social from 'components/Social';
@@ -42,7 +42,7 @@ export function Layout({ children, location }) {
   return (
     <React.Fragment>
       {isLoading && isHome ? (
-        <Backdrop finishLoading={() => setIsLoading(false)} />
+        <Loader finishLoading={() => setIsLoading(false)} />
       ) : (
         <Wrapper>
           <Header isHome={isHome} />

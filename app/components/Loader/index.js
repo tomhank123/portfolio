@@ -1,6 +1,6 @@
 /**
  *
- * Backdrop
+ * Loader
  *
  */
 
@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Inner from './Inner';
 import Wrapper from './Wrapper';
 
-function Backdrop({ finishLoading }) {
+function Loader({ finishLoading }) {
   const [isMounted, setIsMounted] = useState(false);
   const animate = useCallback(() => {
     const loader = anime.timeline({
@@ -66,8 +66,8 @@ function Backdrop({ finishLoading }) {
   );
 }
 
-Backdrop.propTypes = {
+Loader.propTypes = {
   finishLoading: PropTypes.func,
 };
 
-export default Backdrop;
+export default Loader;
