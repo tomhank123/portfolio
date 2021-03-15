@@ -7,6 +7,7 @@ import Wrapper from './Wrapper';
 import Credit from './Credit';
 
 function Footer() {
+  const { socialMedia } = config;
   const [githubInfo, setGitHubInfo] = useState({
     stars: null,
     forks: null,
@@ -35,8 +36,8 @@ function Footer() {
     <Wrapper>
       <SocialLinks>
         <ul>
-          {config.socialMedia &&
-            config.socialMedia.map(({ name, url, prefix }) => (
+          {socialMedia &&
+            socialMedia.map(({ name, url, prefix }) => (
               <li key={`${url}`}>
                 <a href={url} aria-label={name}>
                   <FontAwesomeIcon icon={[prefix, name]} />
@@ -46,7 +47,7 @@ function Footer() {
         </ul>
       </SocialLinks>
 
-      <Credit tabIndex={-1}>
+      <Credit tabIndex="-1">
         <a
           href="https://github.com/ductran-94-dev/portfolio"
           target="_blank"
