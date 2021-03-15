@@ -13,25 +13,24 @@ import Heading from './Heading';
 import Wrapper from './Wrapper';
 
 function Featured() {
-  const projectsToShow = projectData.slice(0, 3);
+  const { srConfig } = config;
+  const featuredProjects = projectData.slice(0, 3);
 
   const revealTitle = useRef(null);
   const revealProjects = useRef([]);
   useEffect(() => {
-    if (sr) {
-      sr.reveal(revealTitle.current, config.srConfig());
-      revealProjects.current.forEach(
-        (ref, i) => sr && sr.reveal(ref, config.srConfig(i * 100)),
-      );
-    }
+    sr.reveal(revealTitle.current, srConfig());
+    revealProjects.current.forEach((ref, i) =>
+      sr.reveal(ref, srConfig(i * 100)),
+    );
   }, []);
 
   return (
     <Wrapper id="projects">
       <Heading ref={revealTitle}>Some Things I’ve Built</Heading>
       <div>
-        {projectsToShow &&
-          projectsToShow.map(({ node }, i) => {
+        {featuredProjects &&
+          featuredProjects.map(({ node }, i) => {
             const { frontmatter } = node;
             const { title } = frontmatter;
 

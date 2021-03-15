@@ -17,12 +17,11 @@ import Text from './Text';
 import Wrapper from './Wrapper';
 
 function Biography() {
+  const { srConfig } = config;
   const revealContainer = useRef(null);
 
   useEffect(() => {
-    if (sr) {
-      sr.reveal(revealContainer.current, config.srConfig());
-    }
+    sr.reveal(revealContainer.current, srConfig());
   }, []);
 
   const skills = [

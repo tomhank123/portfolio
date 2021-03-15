@@ -18,19 +18,18 @@ import Wrapper from './Wrapper';
 const GRID_LIMIT = 6;
 
 function Project() {
+  const { srConfig } = config;
   const [showMore, setShowMore] = useState(false);
   const revealTitle = useRef(null);
   const revealArchiveLink = useRef(null);
   const revealProjects = useRef([]);
 
   useEffect(() => {
-    if (sr) {
-      sr.reveal(revealTitle.current, config.srConfig());
-      sr.reveal(revealArchiveLink.current, config.srConfig());
-      revealProjects.current.forEach(
-        (ref, i) => sr && sr.reveal(ref, config.srConfig(i * 100)),
-      );
-    }
+    sr.reveal(revealTitle.current, srConfig());
+    sr.reveal(revealArchiveLink.current, srConfig());
+    revealProjects.current.forEach((ref, i) =>
+      sr.reveal(ref, srConfig(i * 100)),
+    );
   }, []);
 
   const firstSix = projectData.slice(0, GRID_LIMIT);

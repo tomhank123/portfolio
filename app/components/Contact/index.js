@@ -15,12 +15,11 @@ import Overline from './Overline';
 import Title from './Title';
 
 function Contact() {
+  const { srConfig, email } = config;
   const revealContainer = useRef(null);
 
   useEffect(() => {
-    if (sr) {
-      sr.reveal(revealContainer.current, config.srConfig());
-    }
+    sr.reveal(revealContainer.current, srConfig());
   }, []);
 
   return (
@@ -32,7 +31,7 @@ function Contact() {
         is always open. Whether you have a question or just want to say hi, I'll
         try my best to get back to you!
       </p>
-      <EmailLink href={`mailto:${config.email}`}>Say Hello</EmailLink>
+      <EmailLink href={`mailto:${email}`}>Say Hello</EmailLink>
     </Wrapper>
   );
 }
