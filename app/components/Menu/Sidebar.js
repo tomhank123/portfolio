@@ -61,11 +61,4 @@ export default styled.aside`
       padding: 3px 20px 20px;
     }
   }
-
-  .resume-link {
-    ${({ theme }) => theme.mixins.bigButton};
-    padding: 18px 50px;
-    margin: 10% auto 0;
-    width: max-content;
-  }
 `;

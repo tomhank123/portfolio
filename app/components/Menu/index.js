@@ -14,6 +14,7 @@ import { Link } from 'react-router-dom';
 import HamburgerButton from './HamburgerButton';
 import Sidebar from './Sidebar';
 import Wrapper from './Wrapper';
+import ResumeLink from './ResumeLink';
 
 function Menu() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,6 +23,7 @@ function Menu() {
 
   const buttonRef = useRef(null);
   const navRef = useRef(null);
+  const wrapperRef = useRef();
 
   let menuFocusables;
   let firstFocusableEl;
@@ -93,10 +95,8 @@ function Menu() {
       document.removeEventListener('keydown', onKeyDown);
       window.removeEventListener('resize', onResize);
     };
-    // eslint-disable-next-line
   }, []);
 
-  const wrapperRef = useRef();
   useOnClickOutside(wrapperRef, () => setMenuOpen(false));
 
   return (
@@ -132,9 +132,7 @@ function Menu() {
               </ol>
             )}
 
-            <a href="/resume.pdf" className="resume-link">
-              Resume
-            </a>
+            <ResumeLink href="/resume.pdf">Resume</ResumeLink>
           </nav>
         </Sidebar>
       </div>

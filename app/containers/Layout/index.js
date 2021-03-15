@@ -37,7 +37,7 @@ export function Layout({ children, location }) {
         }
       }, 0);
     }
-  }, [isLoading, location.hash]);
+  }, [isLoading]);
 
   return (
     <React.Fragment>
@@ -48,6 +48,7 @@ export function Layout({ children, location }) {
           <Header isHome={isHome} />
           <Social isHome={isHome} />
           <Email isHome={isHome} />
+
           <div id="content">
             {children}
             <Footer />
@@ -59,8 +60,8 @@ export function Layout({ children, location }) {
 }
 
 Layout.propTypes = {
-  children: PropTypes.node,
-  location: PropTypes.object,
+  children: PropTypes.node.isRequired,
+  location: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = createStructuredSelector({
