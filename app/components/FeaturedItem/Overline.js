@@ -6,4 +6,9 @@ export default styled.p`
   font-family: var(--font-mono);
   font-size: var(--fz-xs);
   font-weight: 400;
+
+  &:last-child,
+  &:last-of-type {
+    margin: 0.5rem 0;
+  }
 `;
