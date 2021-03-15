@@ -4,15 +4,15 @@
  *
  */
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import anime from 'animejs';
 import PropTypes from 'prop-types';
 import React, { useCallback, useEffect, useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Helmet } from 'react-helmet';
 import Inner from './Inner';
 import Wrapper from './Wrapper';
 
 function Loader({ finishLoading }) {
-  const [isMounted, setIsMounted] = useState(false);
   const animate = useCallback(() => {
     const loader = anime.timeline({
       complete: () => finishLoading(),
@@ -49,16 +49,18 @@ function Loader({ finishLoading }) {
       });
   }, [finishLoading]);
 
+  const [isMounted, setIsMounted] = useState(false);
+
   useEffect(() => {
     const timeout = setTimeout(() => setIsMounted(true), 10);
-
     animate();
-
     return () => clearTimeout(timeout);
   }, [animate]);
 
   return (
     <Wrapper className="loader">
+      <Helmet bodyAttributes={{ class: `hidden` }} />
+
       <Inner isMounted={isMounted}>
         <FontAwesomeIcon icon={['fab', 'dochub']} size="4x" />
       </Inner>
@@ -67,7 +69,7 @@ function Loader({ finishLoading }) {
 }
 
 Loader.propTypes = {
-  finishLoading: PropTypes.func,
+  finishLoading: PropTypes.func.isRequired,
 };
 
 export default Loader;
