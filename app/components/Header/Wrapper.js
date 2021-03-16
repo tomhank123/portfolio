@@ -9,7 +9,7 @@ export default styled.div`
   padding: 0px 50px;
   width: 100%;
   height: var(--nav-height);
-  background-color: var(--navy);
+  background-color: var(--pallete-primary);
   filter: none !important;
   pointer-events: auto !important;
   user-select: auto !important;
@@ -23,7 +23,7 @@ export default styled.div`
       height: var(--nav-scroll-height);
       transform: translateY(0px);
       background-color: rgba(10, 25, 47, 0.85);
-      box-shadow: 0 10px 30px -10px var(--navy-shadow);
+      box-shadow: 0 10px 30px -10px var(--pallete-primary-shadow);
     `};
 
   ${props =>
@@ -32,7 +32,7 @@ export default styled.div`
     css`
       height: var(--nav-scroll-height);
       transform: translateY(calc(var(--nav-scroll-height) * -1));
-      box-shadow: 0 10px 30px -10px var(--navy-shadow);
+      box-shadow: 0 10px 30px -10px var(--pallete-primary-shadow);
     `};
 
   @media (max-width: 1080px) {

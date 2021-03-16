@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export default styled.h3`
-  color: var(--lightest-slate);
+  color: var(--pallete-secondary-lightest);
   font-size: clamp(24px, 5vw, 28px);
 
   @media (min-width: 768px) {
@@ -9,6 +9,6 @@ export default styled.h3`
   }
 
   @media (max-width: 768px) {
-    color: var(--white);
+    color: var(--pallete-white);
   }
 `;

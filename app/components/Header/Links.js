@@ -26,7 +26,7 @@ export default styled.div`
         &:before {
           content: '0' counter(item) '.';
           margin-right: 5px;
-          color: var(--green);
+          color: var(--pallete-green);
           font-size: var(--fz-xxs);
           text-align: right;
         }

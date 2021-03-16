@@ -12,6 +12,6 @@ export default styled.div`
     width: 1px;
     height: 90px;
     margin: 0 auto;
-    background-color: var(--light-slate);
+    background-color: var(--pallete-secondary-light);
   }
 `;

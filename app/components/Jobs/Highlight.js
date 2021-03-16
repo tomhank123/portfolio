@@ -8,7 +8,7 @@ export default styled.div`
   width: 2px;
   height: var(--tab-height);
   border-radius: var(--border-radius);
-  background: var(--green);
+  background: var(--pallete-green);
   transform: translateY(
     calc(${({ activeTabId }) => activeTabId} * var(--tab-height))
   );

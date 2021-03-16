@@ -5,7 +5,7 @@ export default styled.h2`
 
   display: block;
   margin-bottom: 20px;
-  color: var(--green);
+  color: var(--pallete-green);
   font-family: var(--font-mono);
   font-size: var(--fz-md);
   font-weight: 400;

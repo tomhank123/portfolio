@@ -5,7 +5,7 @@ export default styled.div`
   margin-bottom: 30px;
 
   .folder {
-    color: var(--green);
+    color: var(--pallete-green);
     svg {
       width: 40px;
       height: 40px;
@@ -14,7 +14,7 @@ export default styled.div`
 
   .project-links {
     margin-right: -10px;
-    color: var(--light-slate);
+    color: var(--pallete-secondary-light);
 
     a {
       padding: 5px 10px;

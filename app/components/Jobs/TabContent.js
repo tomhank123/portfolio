@@ -23,13 +23,13 @@ export default styled.div`
     font-weight: 500;
 
     .company {
-      color: var(--green);
+      color: var(--pallete-green);
     }
   }
 
   .range {
     margin-bottom: 30px;
-    color: var(--light-slate);
+    color: var(--pallete-secondary-light);
     font-family: var(--font-mono);
     font-size: var(--fz-xs);
   }

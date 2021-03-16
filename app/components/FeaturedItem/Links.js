@@ -6,7 +6,7 @@ export default styled.div`
   position: relative;
   margin-top: 10px;
   margin-left: -10px;
-  color: var(--lightest-slate);
+  color: var(--pallete-secondary-lightest);
   a {
     padding: 10px;
     svg {

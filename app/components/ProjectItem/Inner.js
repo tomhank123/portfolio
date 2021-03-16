@@ -9,6 +9,6 @@ export default styled.div`
   height: 100%;
   padding: 2rem 1.75rem;
   border-radius: var(--border-radius);
-  background-color: var(--light-navy);
+  background-color: var(--pallete-primary-light);
   transition: var(--transition);
 `;

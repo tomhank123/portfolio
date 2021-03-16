@@ -15,7 +15,7 @@ export default styled.div`
 
   a {
     width: 100%;
-    background-color: var(--green);
+    background-color: var(--pallete-green);
     border-radius: var(--border-radius);
     vertical-align: middle;
 
@@ -41,7 +41,7 @@ export default styled.div`
       bottom: 0;
       z-index: 3;
       transition: var(--transition);
-      background-color: var(--navy);
+      background-color: var(--pallete-primary);
       mix-blend-mode: screen;
     }
   }

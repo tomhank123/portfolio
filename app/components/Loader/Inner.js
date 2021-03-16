@@ -11,7 +11,7 @@ export default styled.div`
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    color: var(--green);
+    color: var(--pallete-green);
     fill: none;
     user-select: none;
     #B {

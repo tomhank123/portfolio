@@ -20,7 +20,7 @@ export default styled.div`
         content: '▹';
         position: absolute;
         left: 0;
-        color: var(--green);
+        color: var(--pallete-green);
         font-size: var(--fz-sm);
         line-height: 12px;
       }

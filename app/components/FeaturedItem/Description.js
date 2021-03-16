@@ -7,8 +7,8 @@ export default styled.div`
   z-index: 2;
   padding: 25px;
   border-radius: var(--border-radius);
-  background-color: var(--light-navy);
-  color: var(--light-slate);
+  background-color: var(--pallete-primary-light);
+  color: var(--pallete-secondary-light);
   font-size: var(--fz-lg);
 
   @media (max-width: 768px) {

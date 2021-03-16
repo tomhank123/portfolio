@@ -4,6 +4,6 @@ export default styled.h3`
   ${({ theme }) => theme.mixins.bigHeading};
 
   margin-top: 10px;
-  color: var(--slate);
+  color: var(--pallete-secondary);
   line-height: 0.9;
 `;

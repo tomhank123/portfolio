@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export default styled.div`
-  color: var(--light-slate);
+  color: var(--pallete-secondary-light);
   font-family: var(--font-mono);
   font-size: var(--fz-xxs);
   line-height: 1;

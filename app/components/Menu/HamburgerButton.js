@@ -33,7 +33,7 @@ export default styled.button`
     width: var(--hamburger-width);
     height: 2px;
     border-radius: var(--border-radius);
-    background-color: var(--green);
+    background-color: var(--pallete-green);
     transition-duration: 0.22s;
     transition-property: transform;
     transition-delay: ${props => (props.menuOpen ? '0.12s' : '0s')};
@@ -52,7 +52,7 @@ export default styled.button`
       width: var(--hamburger-width);
       height: 2px;
       border-radius: 4px;
-      background-color: var(--green);
+      background-color: var(--pallete-green);
       transition-timing-function: ease;
       transition-duration: 0.15s;
       transition-property: transform;

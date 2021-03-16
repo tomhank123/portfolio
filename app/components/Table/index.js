@@ -26,7 +26,7 @@ export default styled.div`
     tbody tr {
       &:hover,
       &:focus {
-        background-color: var(--light-navy);
+        background-color: var(--pallete-primary-light);
       }
     }
 
@@ -82,7 +82,7 @@ export default styled.div`
       &.title {
         padding-top: 15px;
         padding-right: 20px;
-        color: var(--lightest-slate);
+        color: var(--pallete-secondary-lightest);
         font-size: var(--fz-xl);
         font-weight: 600;
         line-height: 1.25;

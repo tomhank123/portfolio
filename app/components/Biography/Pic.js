@@ -15,7 +15,7 @@ export default styled.div`
     position: relative;
     width: 100%;
     border-radius: var(--border-radius);
-    background-color: var(--green);
+    background-color: var(--pallete-green);
 
     &:hover,
     &:focus {
@@ -56,12 +56,12 @@ export default styled.div`
     &:before {
       top: 0;
       left: 0;
-      background-color: var(--navy);
+      background-color: var(--pallete-primary);
       mix-blend-mode: screen;
     }
 
     &:after {
-      border: 2px solid var(--green);
+      border: 2px solid var(--pallete-green);
       top: 20px;
       left: 20px;
       z-index: -1;

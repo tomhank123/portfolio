@@ -13,8 +13,8 @@ export default styled.aside`
     width: min(75vw, 400px);
     height: 100vh;
     outline: 0;
-    background-color: var(--light-navy);
-    box-shadow: -10px 0px 30px -15px var(--navy-shadow);
+    background-color: var(--pallete-primary-light);
+    box-shadow: -10px 0px 30px -15px var(--pallete-primary-shadow);
     z-index: 9;
     transform: translateX(${props => (props.menuOpen ? 0 : 100)}vw);
     visibility: ${props => (props.menuOpen ? 'visible' : 'hidden')};
@@ -25,7 +25,7 @@ export default styled.aside`
     ${({ theme }) => theme.mixins.flexBetween};
     width: 100%;
     flex-direction: column;
-    color: var(--lightest-slate);
+    color: var(--pallete-secondary-lightest);
     font-family: var(--font-mono);
     text-align: center;
   }
@@ -50,7 +50,7 @@ export default styled.aside`
         content: '0' counter(item) '.';
         display: block;
         margin-bottom: 5px;
-        color: var(--green);
+        color: var(--pallete-green);
         font-size: var(--fz-sm);
       }
     }

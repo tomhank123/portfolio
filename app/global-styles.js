@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { createGlobalStyle } from 'styled-components';
 import Fonts from 'styles/font';
 import TransitionStyles from 'styles/transitionStyles';
@@ -7,20 +8,23 @@ const GlobalStyle = createGlobalStyle`
   ${Fonts};
 
   :root {
-    --dark-navy: #020c1b;
-    --navy: #0a192f;
-    --light-navy: #172a45;
-    --lightest-navy: #303C55;
-    --navy-shadow: rgba(2, 12, 27, 0.7);
-    --slate: #8892b0;
-    --light-slate: #a8b2d1;
-    --lightest-slate: #ccd6f6;
-    --white: #e6f1ff;
-    --green: #64ffda;
-    --green-tint: rgba(100, 255, 218, 0.1);
-  
-    --font-sans: 'Calibre', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
-    --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+    --pallete-white: ${props => props.theme.pallete.common.white};
+
+    --pallete-primary: ${props => props.theme.pallete.primary.main};
+    --pallete-primary-dark: ${props => props.theme.pallete.primary.dark};
+    --pallete-primary-light: ${props => props.theme.pallete.primary.light};
+    --pallete-primary-lightest: ${props => props.theme.pallete.primary.lightest};
+    --pallete-primary-shadow: ${props => props.theme.pallete.primary.shadow};
+
+    --pallete-secondary: ${props => props.theme.pallete.secondary.main};
+    --pallete-secondary-light: ${props => props.theme.pallete.secondary.light};
+    --pallete-secondary-lightest: ${props => props.theme.pallete.secondary.lightest};
+
+    --pallete-green: ${props => props.theme.pallete.green.main};
+    --pallete-green-tint: ${props => props.theme.pallete.green.tint};
+
+    --font-sans: ${props => props.theme.typography.fontFamily};
+    --font-mono: ${props => props.theme.typography.fontMono};
   
     --fz-xxs: 12px;
     --fz-xs: 13px;
@@ -31,15 +35,15 @@ const GlobalStyle = createGlobalStyle`
     --fz-xxl: 22px;
     --fz-heading: 32px;
   
-    --border-radius: 4px;
+    --border-radius: ${props => props.theme.shape.borderRadius};
     --nav-height: 100px;
     --nav-scroll-height: 70px;
   
     --tab-height: 42px;
     --tab-width: 170px;
   
-    --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
-    --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    --easing: ${props => props.theme.transitions.easing};
+    --transition: all ${props => props.theme.transitions.duration} ${props => props.theme.transitions.easing};
   
     --hamburger-width: 30px;
   
@@ -60,8 +64,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ::selection {
-    background-color: var(--slate);
-    color: var(--lightest-slate);
+    background-color: var(--pallete-secondary);
+    color: var(--pallete-secondary-lightest);
   }
 
   html,
@@ -78,8 +82,8 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    background-color: var(--navy);
-    color: var(--slate);
+    background-color: var(--pallete-primary);
+    color: var(--pallete-secondary);
     font-family: var(--font-sans);
     font-size: var(--fz-xl);
     line-height: 1.3;
@@ -173,7 +177,7 @@ const GlobalStyle = createGlobalStyle`
   h6 {
     margin: 0 0 10px 0;
     font-weight: 600;
-    color: var(--lightest-slate);
+    color: var(--pallete-secondary-lightest);
     line-height: 1.1;
   }
   
@@ -202,7 +206,7 @@ const GlobalStyle = createGlobalStyle`
       counter-increment: section;
       content: '0' counter(section) '.';
       margin-right: 10px;
-      color: var(--green);
+      color: var(--pallete-green);
       font-family: var(--font-mono);
       font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
       font-weight: 400;
@@ -221,7 +225,7 @@ const GlobalStyle = createGlobalStyle`
       width: 300px;
       height: 1px;
       margin-left: 20px;
-      background-color: var(--lightest-navy);
+      background-color: var(--pallete-primary-lightest);
   
       @media (max-width: 1080px) {
         width: 200px;
@@ -266,7 +270,7 @@ const GlobalStyle = createGlobalStyle`
   
     &:hover,
     &:focus {
-      color: var(--green);
+      color: var(--pallete-green);
     }
   
     &.inline-link {
@@ -308,8 +312,8 @@ const GlobalStyle = createGlobalStyle`
     }
   
     & > code {
-      background-color: var(--light-navy);
-      color: var(--white);
+      background-color: var(--pallete-primary-light);
+      color: var(--pallete-white);
       font-size: var(--fz-sm);
       border-radius: var(--border-radius);
       padding: 0.3em 0.5em;
@@ -330,14 +334,14 @@ const GlobalStyle = createGlobalStyle`
           content: '▹';
           position: absolute;
           left: 0;
-          color: var(--green);
+          color: var(--pallete-green);
         }
       }
     }
   }
   
   blockquote {
-    border-left-color: var(--green);
+    border-left-color: var(--pallete-green);
     border-left-style: solid;
     border-left-width: 1px;
     margin-left: 0px;
@@ -351,7 +355,7 @@ const GlobalStyle = createGlobalStyle`
   }
   
   hr {
-    background-color: var(--lightest-navy);
+    background-color: var(--pallete-primary-lightest);
     height: 1px;
     border-width: 0px;
     border-style: initial;
@@ -366,18 +370,18 @@ const GlobalStyle = createGlobalStyle`
   }
   
   #logo {
-    color: var(--green);
+    color: var(--pallete-green);
   }
   
   .overline {
-    color: var(--green);
+    color: var(--pallete-green);
     font-family: var(--font-mono);
     font-size: var(--fz-md);
     font-weight: 400;
   }
   
   .subtitle {
-    color: var(--green);
+    color: var(--pallete-green);
     margin: 0 0 20px 0;
     font-size: var(--fz-md);
     font-family: var(--font-mono);
@@ -400,7 +404,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     align-items: center;
     margin-bottom: 50px;
-    color: var(--green);
+    color: var(--pallete-green);
   
     .arrow {
       display: block;

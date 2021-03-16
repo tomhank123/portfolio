@@ -7,9 +7,10 @@ export default styled.button`
   width: 100%;
   height: var(--tab-height);
   padding: 0 20px 2px;
-  border-left: 2px solid var(--lightest-navy);
+  border-left: 2px solid var(--pallete-primary-lightest);
   background-color: transparent;
-  color: ${({ isActive }) => (isActive ? 'var(--green)' : 'var(--slate)')};
+  color: ${({ isActive }) =>
+    isActive ? 'var(--pallete-green)' : 'var(--pallete-secondary)'};
   font-family: var(--font-mono);
   font-size: var(--fz-xs);
   text-align: left;
@@ -23,12 +24,12 @@ export default styled.button`
     min-width: var(--tab-width);
     padding: 0 15px;
     border-left: 0;
-    border-bottom: 2px solid var(--lightest-navy);
+    border-bottom: 2px solid var(--pallete-primary-lightest);
     text-align: center;
   }
 
   &:hover,
   &:focus {
-    background-color: var(--light-navy);
+    background-color: var(--pallete-primary-light);
   }
 `;

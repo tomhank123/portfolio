@@ -11,7 +11,7 @@ export default styled.div`
 
   li {
     margin: 0 20px 5px 0;
-    color: var(--light-slate);
+    color: var(--pallete-secondary-light);
     font-family: var(--font-mono);
     font-size: var(--fz-xs);
     white-space: nowrap;
@@ -22,7 +22,7 @@ export default styled.div`
 
     li {
       margin: 0 10px 5px 0;
-      color: var(--lightest-slate);
+      color: var(--pallete-secondary-lightest);
     }
   }
 `;
