@@ -13,25 +13,8 @@ import { render } from 'react-testing-library';
 import Project from '../index';
 
 describe('<Project />', () => {
-  it('Expect to not log errors in console', () => {
-    const spy = jest.spyOn(global.console, 'error');
-    render(<Project />);
-    expect(spy).not.toHaveBeenCalled();
-  });
-
-  it('Expect to have additional unit tests specified', () => {
-    expect(true).toEqual(false);
-  });
-
-  /**
-   * Unskip this test to use it
-   *
-   * @see {@link https://jestjs.io/docs/en/api#testskipname-fn}
-   */
-  it.skip('Should render and match the snapshot', () => {
-    const {
-      container: { firstChild },
-    } = render(<Project />);
-    expect(firstChild).toMatchSnapshot();
+  it('should render an <section> tag', () => {
+    const { container } = render(<Project />);
+    expect(container.firstElementChild.tagName).toEqual('SECTION');
   });
 });

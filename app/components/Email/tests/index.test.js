@@ -13,25 +13,14 @@ import { render } from 'react-testing-library';
 import Email from '../index';
 
 describe('<Email />', () => {
-  it('Expect to not log errors in console', () => {
-    const spy = jest.spyOn(global.console, 'error');
-    render(<Email />);
-    expect(spy).not.toHaveBeenCalled();
+  it('should render an <div> tag', () => {
+    const { container } = render(<Email />);
+    expect(container.firstElementChild.tagName).toEqual('DIV');
   });
 
-  it('Expect to have additional unit tests specified', () => {
-    expect(true).toEqual(false);
-  });
-
-  /**
-   * Unskip this test to use it
-   *
-   * @see {@link https://jestjs.io/docs/en/api#testskipname-fn}
-   */
-  it.skip('Should render and match the snapshot', () => {
-    const {
-      container: { firstChild },
-    } = render(<Email />);
-    expect(firstChild).toMatchSnapshot();
+  it('should have a orientation attribute', () => {
+    const { container } = render(<Email />);
+    const element = container.firstElementChild;
+    expect(element.hasAttribute('orientation')).toBe(true);
   });
 });

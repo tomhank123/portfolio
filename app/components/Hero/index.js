@@ -35,7 +35,9 @@ function Hero() {
     </Text>
   );
   const five = (
-    <EmailLink href={`mailto:${config.email}`}>Get In Touch</EmailLink>
+    <EmailLink className="btn-big" href={`mailto:${config.email}`}>
+      Get In Touch
+    </EmailLink>
   );
   const items = [one, two, three, four, five];
 

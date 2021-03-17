@@ -13,25 +13,13 @@ import { render } from 'react-testing-library';
 import Featured from '../index';
 
 describe('<Featured />', () => {
-  it('Expect to not log errors in console', () => {
-    const spy = jest.spyOn(global.console, 'error');
-    render(<Featured />);
-    expect(spy).not.toHaveBeenCalled();
+  it('should render an <section> tag', () => {
+    const { container } = render(<Featured />);
+    expect(container.firstElementChild.tagName).toEqual('SECTION');
   });
 
-  it('Expect to have additional unit tests specified', () => {
-    expect(true).toEqual(false);
-  });
-
-  /**
-   * Unskip this test to use it
-   *
-   * @see {@link https://jestjs.io/docs/en/api#testskipname-fn}
-   */
-  it.skip('Should render and match the snapshot', () => {
-    const {
-      container: { firstChild },
-    } = render(<Featured />);
-    expect(firstChild).toMatchSnapshot();
+  it('render a heading', () => {
+    const { getByText } = render(<Featured />);
+    expect(getByText('Some Things I’ve Built')).toBeTruthy();
   });
 });

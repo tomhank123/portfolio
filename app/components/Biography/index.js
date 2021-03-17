@@ -36,7 +36,7 @@ function Biography() {
 
   return (
     <Wrapper ref={revealContainer} id="about">
-      <Heading>About Me</Heading>
+      <Heading className="number-heading">About Me</Heading>
       <Inner>
         <Text>
           <div>
@@ -78,7 +78,7 @@ function Biography() {
           </ul>
         </Text>
         <Pic>
-          <div className="wrapper">
+          <div className="wrapper box-shadow">
             <img src={avatarJPG} alt="Avatar" className="img" />
           </div>
         </Pic>

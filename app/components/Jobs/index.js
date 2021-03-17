@@ -61,7 +61,7 @@ function Jobs() {
 
   return (
     <Wrapper id="jobs" ref={revealContainer}>
-      <Heading>Where I’ve Worked</Heading>
+      <Heading className="number-heading">Where I’ve Worked</Heading>
       <Inner>
         <TabList role="tablist" aria-label="Job tabs" onKeyDown={onKeyDown}>
           {jobsData &&

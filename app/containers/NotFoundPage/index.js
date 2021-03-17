@@ -38,7 +38,9 @@ export default function NotFound() {
               <Subtitle>
                 <FormattedMessage {...messages.header} />
               </Subtitle>
-              <Button to="/">Go Home</Button>
+              <Button className="btn-big" to="/">
+                Go Home
+              </Button>
             </Wrapper>
           </CSSTransition>
         )}

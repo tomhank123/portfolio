@@ -132,7 +132,9 @@ function Menu() {
               </ol>
             )}
 
-            <ResumeLink href="/resume.pdf">Resume</ResumeLink>
+            <ResumeLink className="btn-big" href="/resume.pdf">
+              Resume
+            </ResumeLink>
           </nav>
         </Sidebar>
       </div>

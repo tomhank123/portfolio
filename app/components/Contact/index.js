@@ -24,14 +24,16 @@ function Contact() {
 
   return (
     <Wrapper id="contact" ref={revealContainer}>
-      <Overline>What’s Next?</Overline>
+      <Overline className="number-heading">What’s Next?</Overline>
       <Title>Get In Touch</Title>
       <p>
         Although I'm not currently looking for any new opportunities, my inbox
         is always open. Whether you have a question or just want to say hi, I'll
         try my best to get back to you!
       </p>
-      <EmailLink href={`mailto:${email}`}>Say Hello</EmailLink>
+      <EmailLink className="btn-big" href={`mailto:${email}`}>
+        Say Hello
+      </EmailLink>
     </Wrapper>
   );
 }

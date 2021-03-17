@@ -27,7 +27,9 @@ function Featured() {
 
   return (
     <Wrapper id="projects">
-      <Heading ref={revealTitle}>Some Things I’ve Built</Heading>
+      <Heading className="number-heading" ref={revealTitle}>
+        Some Things I’ve Built
+      </Heading>
       <div>
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {

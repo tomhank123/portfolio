@@ -13,25 +13,44 @@ import { render } from 'react-testing-library';
 import Biography from '../index';
 
 describe('<Biography />', () => {
-  it('Expect to not log errors in console', () => {
-    const spy = jest.spyOn(global.console, 'error');
-    render(<Biography />);
-    expect(spy).not.toHaveBeenCalled();
+  it('should render an <section> tag', () => {
+    const { container } = render(<Biography />);
+    expect(container.firstElementChild.tagName).toEqual('SECTION');
   });
 
-  it('Expect to have additional unit tests specified', () => {
-    expect(true).toEqual(false);
+  it('should have a id attribute', () => {
+    const { container } = render(<Biography />);
+    const element = container.firstElementChild;
+    expect(element.hasAttribute('id')).toBe(true);
   });
 
-  /**
-   * Unskip this test to use it
-   *
-   * @see {@link https://jestjs.io/docs/en/api#testskipname-fn}
-   */
-  it.skip('Should render and match the snapshot', () => {
-    const {
-      container: { firstChild },
-    } = render(<Biography />);
-    expect(firstChild).toMatchSnapshot();
+  it('should adopt a valid attribute', () => {
+    const id = 'about';
+    const { container } = render(<Biography id={id} />);
+    const element = container.firstElementChild;
+    expect(element.id).toEqual(id);
+  });
+
+  it('render a heading', () => {
+    const { getByText } = render(<Biography />);
+    expect(getByText('About Me')).toBeTruthy();
+  });
+
+  it('the skill list', () => {
+    const { getByText } = render(<Biography />);
+    const skills = [
+      'JavaScript (ES6+)',
+      'Typescript',
+      'ReactJS',
+      'Vue JS',
+      'HTML & (S)CSS',
+      'Node.js',
+      'React Native',
+    ];
+
+    // eslint-disable-next-line no-plusplus
+    for (let i = 0, len = skills.length; i < len; i++) {
+      expect(getByText(skills[i])).toBeTruthy();
+    }
   });
 });
