@@ -45,7 +45,6 @@ describe('<Biography />', () => {
       'Vue JS',
       'HTML & (S)CSS',
       'Node.js',
-      'React Native',
     ];
 
     // eslint-disable-next-line no-plusplus

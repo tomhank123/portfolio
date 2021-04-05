@@ -31,7 +31,6 @@ function Biography() {
     'Vue JS',
     'HTML & (S)CSS',
     'Node.js',
-    'React Native',
   ];
 
   return (

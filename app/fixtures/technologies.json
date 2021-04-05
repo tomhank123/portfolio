@@ -21,13 +21,6 @@
     "thumb": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png"
   },
   {
-    "id": 4,
-    "title": "React Native",
-    "issuedBy": "freeCodeCamp.org",
-    "icon": "react",
-    "thumb": "https://cdn.worldvectorlogo.com/logos/react.svg"
-  },
-  {
     "id": 5,
     "title": "HTML(5)",
     "issuedBy": "freeCodeCamp.org",
