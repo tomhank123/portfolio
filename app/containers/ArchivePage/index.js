@@ -4,6 +4,7 @@
  *
  */
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Table from 'components/Table';
 import Layout from 'containers/Layout';
 import projects from 'fixtures/projects.json';
@@ -97,17 +98,19 @@ export function ArchivePage() {
                         <div>
                           {external && (
                             <a href={external} aria-label="External Link">
-                              External
+                              <FontAwesomeIcon
+                                icon={['fas', 'external-link-alt']}
+                              />
                             </a>
                           )}
                           {github && (
                             <a href={github} aria-label="GitHub Link">
-                              GitHub
+                              <FontAwesomeIcon icon={['fab', 'github']} />
                             </a>
                           )}
                           {ios && (
                             <a href={ios} aria-label="Apple App Store Link">
-                              AppStore
+                              <FontAwesomeIcon icon={['fab', 'apple']} />
                             </a>
                           )}
                           {android && (
@@ -116,6 +119,7 @@ export function ArchivePage() {
                               aria-label="Google Play Store Link"
                             >
                               PlayStore
+                              <FontAwesomeIcon icon={['fab', 'google-play']} />
                             </a>
                           )}
                         </div>
