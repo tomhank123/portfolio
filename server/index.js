@@ -2,6 +2,7 @@
 
 const express = require('express');
 const logger = require('./logger');
+const path = require('path');
 
 const argv = require('./argv');
 const port = require('./port');
@@ -18,7 +19,7 @@ const app = express();
 // app.use('/api', myApi);
 
 // In production we need to pass these values in instead of relying on webpack
-app.use(express.static(resolve(process.cwd(), 'static')));
+app.use(express.static(path.resolve(process.cwd(), 'static')));
 setup(app, {
   outputPath: resolve(process.cwd(), 'build'),
   publicPath: '/',
