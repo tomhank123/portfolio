@@ -6,6 +6,7 @@ const OfflinePlugin = require('offline-plugin');
 const { HashedModuleIdsPlugin } = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const config = require('../../app/utils/config');
 
 module.exports = require('./webpack.base.babel')({
   mode: 'production',
@@ -116,11 +117,11 @@ module.exports = require('./webpack.base.babel')({
     }),
 
     new WebpackPwaManifest({
-      name: 'Duc Tran',
+      name: 'Minh Duc, Tran',
       short_name: 'DucTran',
       description: 'My portfolio project!',
-      background_color: '#fafafa',
-      theme_color: '#3B6064',
+      background_color: config.colors.darkNavy,
+      theme_color: config.colors.navy,
       inject: true,
       ios: true,
       icons: [
