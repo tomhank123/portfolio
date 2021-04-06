@@ -6,7 +6,6 @@ const OfflinePlugin = require('offline-plugin');
 const { HashedModuleIdsPlugin } = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
-const config = require('../../app/utils/config');
 
 module.exports = require('./webpack.base.babel')({
   mode: 'production',
@@ -120,8 +119,8 @@ module.exports = require('./webpack.base.babel')({
       name: 'Minh Duc, Tran',
       short_name: 'DucTran',
       description: 'My portfolio project!',
-      background_color: config.colors.darkNavy,
-      theme_color: config.colors.navy,
+      background_color: '#020c1b',
+      theme_color: '#0a192f',
       inject: true,
       ios: true,
       icons: [
