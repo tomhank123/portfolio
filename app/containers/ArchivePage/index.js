@@ -7,13 +7,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Table from 'components/Table';
 import Layout from 'containers/Layout';
-import projects from 'fixtures/projects.json';
+import { useContent } from 'hooks';
 import React, { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import config from 'utils/config';
 import sr from 'utils/sr';
 
 export function ArchivePage() {
+  const { projects } = useContent('projects');
   const revealTitle = useRef(null);
   const revealTable = useRef(null);
   const revealProjects = useRef([]);

@@ -5,8 +5,8 @@
  */
 
 import FeaturedItem from 'components/FeaturedItem';
-import projectData from 'fixtures/projects.json';
 import React, { useEffect, useRef } from 'react';
+import { useContent } from 'hooks';
 import config from 'utils/config';
 import sr from 'utils/sr';
 import Heading from './Heading';
@@ -14,7 +14,8 @@ import Wrapper from './Wrapper';
 
 function Featured() {
   const { srConfig } = config;
-  const featuredProjects = projectData.slice(0, 3);
+  const { projects } = useContent('projects');
+  const featuredProjects = projects.slice(0, 3);
 
   const revealTitle = useRef(null);
   const revealProjects = useRef([]);

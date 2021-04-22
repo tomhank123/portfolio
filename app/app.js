@@ -26,6 +26,9 @@ import LanguageProvider from 'containers/LanguageProvider';
 import { ThemeProvider } from 'styled-components';
 import theme from 'styles/theme';
 
+import { firebase } from 'lib/firebase.prod';
+import { FirebaseContext } from 'context/firebase';
+
 // Load the favicon and the .htaccess file
 import '!file-loader?name=[name].[ext]!./images/favicon.ico';
 import 'file-loader?name=.htaccess!./.htaccess'; // eslint-disable-line import/extensions
@@ -55,7 +58,9 @@ const render = messages => {
       <LanguageProvider messages={messages}>
         <ConnectedRouter history={history}>
           <ThemeProvider theme={theme}>
-            <App />
+            <FirebaseContext.Provider value={{ firebase }}>
+              <App />
+            </FirebaseContext.Provider>
           </ThemeProvider>
         </ConnectedRouter>
       </LanguageProvider>
